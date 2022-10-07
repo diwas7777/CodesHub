@@ -1,4 +1,4 @@
-numRow=int(input('ENter the number of row\n'))
+numRow=int(input('Enter the number of row: '))
 sp=numRow-1
 st=1
 for i in range(numRow):
@@ -10,13 +10,15 @@ for i in range(numRow):
     sp-=1
     st+=1
     
-/*
-
-    *
-   * * 
-  * * * 
- * * * * 
-* * * * *
 
 
-*/
+# Output
+
+#      *
+#     * * 
+#    * * * 
+#   * * * * 
+#  * * * * *
+
+
+
