@@ -14,5 +14,6 @@ This open source project is made to help students find codes in different langua
 - Add your name to the contributorsList file.
 - Try to keep pull requests small to minimize merge conflicts.
 - Add codes into their respective folders only then the request will be accepted.
+- If you write codes in new language which donot have folder then create a folder and then put the file in it and do MRS.
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
