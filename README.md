@@ -1,4 +1,4 @@
-# CodesHub
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&multiline=true&width=435&height=40&lines=CodesHub)](https://github.com/diwas777777/CodesHub)
 This open source project is made to help students find codes in different languages easily for every usecase.
 
 # Do give us a Star
