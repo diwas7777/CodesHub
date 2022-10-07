@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&multiline=true&width=435&height=40&lines=CodesHub)](https://github.com/diwas777777/CodesHub)
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=435&height=80&lines=CodesHub)](https://github.com/diwas777777/CodesHub)
 This open source project is made to help students find codes in different languages easily for every usecase.
 
 # Do give us a Star
@@ -15,4 +15,4 @@ This open source project is made to help students find codes in different langua
 - Try to keep pull requests small to minimize merge conflicts.
 - Add codes into their respective folders only then the request will be accepted.
 
-# Hacktoberfest 2022
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
