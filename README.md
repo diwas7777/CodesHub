@@ -12,5 +12,6 @@ This open source project is made to help students find codes in different langua
 - Do NOT remove other content.
 - Add your name to the contributorsList file.
 - Try to keep pull requests small to minimize merge conflicts.
+- Add codes into their respective folders.
 
 # Hacktoberfest 2022
