@@ -1,0 +1,15 @@
+{
+  "name": "fastify",
+  "version": "1.0.0",
+  "description": "A fastify API to generate random password with random params.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shashank",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.7.0",
+    "nanoid": "3.0.0"
+  }
+}
