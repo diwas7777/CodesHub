@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background: hsl(205, 100%, 96%);
+  color: hsl(209, 61%, 16%);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h2,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  background: #fff;
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.nav-center {
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.nav-center h4 {
+  margin-bottom: 0;
+  color: black;
+}
+
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h2 {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+.color {
+  color: hsl(210, 22%, 49%);
+}
