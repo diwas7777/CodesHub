@@ -39,7 +39,6 @@ keep in mind that repo has hacktoberfest topic..
 - Review other PR's as well.
 - No Spamming allowed, make sure to include all programs in one PR.
 - Do NOT remove other content.
-- Add your name to the contributorsList file.
 - Try to keep pull requests small to minimize merge conflicts.
 - Add codes into their respective folders only then the request will be accepted.
 - If you write codes in new language which donot have folder then create a folder and then put the file in it and do MRS.
