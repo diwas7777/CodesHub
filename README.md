@@ -50,7 +50,20 @@ keep in mind that repo has hacktoberfest topic..
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [ CodesHub repo of hacktoberfest-2022](https://github.com/diwas777777/CodesHub)         | [![GitHub issues](https://img.shields.io/github/issues/diwas777777/CodesHub?color=pink&logo=github)](https://github.com/diwas777777/CodesHub/issues)         | [![GitHub PRs](https://img.shields.io/github/issues-pr/diwas777777/CodesHub)](https://github.com/diwas777777/CodesHub/pulls)         | [![GitHub forks](https://img.shields.io/github/forks/diwas777777/CodesHub?logo=git)](https://github.com/diwas777777/CodesHub/fork)                         |
 
+## Rules
 
+- Don't use filthy words and be welcome for beginners and other people in this community.
+
+---
+
+## Github Contribution Rules
+- Pull requests can be submitted to any opted-in repository on GitHub or GitLab.
+- The pull request must contain commits you made yourself.
+- If a maintainer reports your pull request as spam, it will not be counted toward your participation in Hacktoberfest.
+- If a maintainer reports behavior that’s not in line with the project’s code of conduct, you will be ineligible to participate.
+- To get a shirt, you must make four approved pull requests (PRs) on opted-in projects between October 1-31 in any time zone.
+- This year, the first 50,000 participants can earn a T-shirt.
+---
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
 
@@ -58,6 +71,7 @@ keep in mind that repo has hacktoberfest topic..
 ![hacktoberfest-banner](https://user-images.githubusercontent.com/60167999/192787587-62a13aa7-1317-4bd5-a4b7-13f8bf336c6a.jpg)
 
 # :handshake: Our Contributors
+
 <a href="https://github.com/diwas777777/CodesHub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=diwas777777/CodesHub" />
+  <img src="https://contrib.rocks/image?repo=diwas777777/CodesHub" /> :computer:
 </a>
