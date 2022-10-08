@@ -4,14 +4,13 @@ This open source project is made to help students find codes in different langua
 # Special Note For Everyone
 ```py
 '''
-always make more then 4 pull request
-lets you have made only 4 pull request to different projects
-but one project is excluded from hackoctoberfest event then your pull request will not be count and 
-then you have remains 3 valid pull request if these projects is not excluded.
-if you fail to make 4 pull request then you cant get swags or t-shirts.
+1. Always make more than 4 pull requests.
+2. Lets say, you made 4 PRs to different projects and every pull request got merged.
+   While on the 7 day review period, one of the PR was taken down by the Hacktoberfest review team.
+   So now you are left with only 3 PRs and hence your participation wont be counted for swags.
+3. Hence I will recommend you to make more than 4 PRs to be on the safe side.
 
-i will recommend you make pull request to your own repo which is very very saffest side for you..
-keep in mind that repo has hacktoberfest topic..
+    Happy Hacking
 '''
 ```
 <h1 align="center"> Hacktoberfest 2022 🎉</h1>
@@ -32,27 +31,27 @@ keep in mind that repo has hacktoberfest topic..
 # Do give us a Star
 
 # Contributions Code of Conduct📚:
-- Add a new program which don't exist earlier.
+- Add a new unique program.
 - It should be in .py extenstion.
 - Check for typos and comment mistake in the code.
-- Please run the program and check if there are no errors before making the PR.
+- Please run the program and check for any errors before making the PR .
 - Review other PR's as well.
-- No Spamming allowed, make sure to include all programs in one PR.
-- Do NOT remove other content.
-- Try to keep pull requests small to minimize merge conflicts.
-- Add codes into their respective folders only then the request will be accepted.
-- If you write codes in new language which donot have folder then create a folder and then put the file in it and do MRS.
+- Do not spam, make sure to include all the programs you want to add in one PR.
+- Do not remove other's content.
+- Try to make the PR small so as to reduce any merge conflicts.
+- Add codes to respective folders according to the language used.
+- If you want to add code of a language whose folder is not present,make a new folder and upload the code inside that folder and make a MR.
 
-> Upload your code in this repository to particular section if folder is not present then create folder.
-> some more repos for contribution
+> Upload your code in this repository to particular section.If folder is not present make a new folder and add code.
+> More repositories for contribution in Hacktoberfest 2022.
 
 | Repository                                                  | Issues                                                                                                                                                           | Pull Requests                                                                                                                                                     | Forks                                                                                                                                                             |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ CodesHub repo of hacktoberfest-2022](https://github.com/diwas777777/CodesHub)         | [![GitHub issues](https://img.shields.io/github/issues/diwas777777/CodesHub?color=pink&logo=github)](https://github.com/diwas777777/CodesHub/issues)         | [![GitHub PRs](https://img.shields.io/github/issues-pr/diwas777777/CodesHub)](https://github.com/diwas777777/CodesHub/pulls)         | [![GitHub forks](https://img.shields.io/github/forks/diwas777777/CodesHub?logo=git)](https://github.com/diwas777777/CodesHub/fork)                         |
+| [ CodesHub Repository for Hacktoberfest-2022](https://github.com/diwas777777/CodesHub)         | [![GitHub issues](https://img.shields.io/github/issues/diwas777777/CodesHub?color=pink&logo=github)](https://github.com/diwas777777/CodesHub/issues)         | [![GitHub PRs](https://img.shields.io/github/issues-pr/diwas777777/CodesHub)](https://github.com/diwas777777/CodesHub/pulls)         | [![GitHub forks](https://img.shields.io/github/forks/diwas777777/CodesHub?logo=git)](https://github.com/diwas777777/CodesHub/fork)                         |
 
 ## Rules
 
-- Don't use filthy words and be welcome for beginners and other people in this community.
+- Don't use foul/bad language and welcome new individuals into the repository.
 
 ---
 
@@ -61,8 +60,8 @@ keep in mind that repo has hacktoberfest topic..
 - The pull request must contain commits you made yourself.
 - If a maintainer reports your pull request as spam, it will not be counted toward your participation in Hacktoberfest.
 - If a maintainer reports behavior that’s not in line with the project’s code of conduct, you will be ineligible to participate.
-- To get a shirt, you must make four approved pull requests (PRs) on opted-in projects between October 1-31 in any time zone.
-- This year, the first 40,000 participants can earn a T-shirt.
+- To get a t-shirt, you must make four approved pull requests (PRs) on opted-in projects between October 1-31 in any time zone.
+- This year, only the first 40,000 participants will recieve swags.
 ---
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
