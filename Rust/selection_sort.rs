@@ -22,5 +22,5 @@ fn selection_sort(vec: &mut Vec<i32>) -> Vec<i32> {
     vec[i] = vec[min];
     vec[min] = temp;
   }
-  return vec.to_vec()
+  return vec.to_vec();
 }
