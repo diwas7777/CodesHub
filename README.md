@@ -32,9 +32,9 @@ This open source project is made to help students find codes in different langua
 
 # Contributions Code of Conduct📚:
 - Add a new unique program.
-- It should be in .py extenstion.
+- It should have proper extenstion.
 - Check for typos and comment mistake in the code.
-- Please run the program and check for any errors before making the PR .
+- Please run the program and check for any errors before making the PR.
 - Review other PR's as well.
 - Do not spam, make sure to include all the programs you want to add in one PR.
 - Do not remove other's content.
