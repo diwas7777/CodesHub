@@ -9,3 +9,6 @@
 - Add your name to the contributorsList file.
 - Try to keep pull requests small to minimize merge conflicts.
 - Add codes into their respective folders only then the request will be accepted.
+
+# Contributers
+- Name : [Tejus Chaturvedi] (https://github.com/tejus0 ) 
