@@ -7,10 +7,11 @@ def play():
     if user == computer:
         return 'It\'s a tie'
 
-    if is_win(user, computer):
+    elif is_win(user, computer):
         return 'You won!'
-
-    return 'You lost!'
+    
+    else:
+        return 'You lost!'
 
 def is_win(player, opponent):
     if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
