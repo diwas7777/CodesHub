@@ -1,7 +1,7 @@
 
 import pygame
 import time
-
+import random
 pygame.init()
 
 white = (255, 255, 255)
@@ -15,7 +15,7 @@ dis_width = 600
 dis_height = 400
 
 dis = pygame.display.set_mode((dis_width, dis_height))
-pygame.display.set_caption('Snake Game by Edureka')
+pygame.display.set_caption('Snake Game by Alby')
 
 clock = pygame.time.Clock()
 
