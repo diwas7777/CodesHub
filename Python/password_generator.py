@@ -5,27 +5,45 @@ class PasswordTools:
     
     def __init__(self) -> None:
         self.my_password = ""
-        self.pass_len = len(my_password)
+        self.pass_len = len(self.my_password)
 
     def __get_upper(self):
-        return string.ascii_uppercase[random.randint(0, 25)]
+        return random.choice(string.ascii_uppercase)
 
     def __get_lower(self):
-        return string.ascii_lowercase[random.randint(0, 25)]
+        return random.choice(string.ascii_lowercase)
 
     def __get_number(self):
         avail_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-        return str(avail_numbers[random.randint(0, len(avail_numbers)-1)])
+        return str(random.choice(avail_numbers))
 
     def __get_symbol(self):
         avail_symbols = ['!', '(', ')', '?', '[', ']', '_', '`', '~', ';', ':', '@', '#', '$', '%', '^', '&', '*', '+', '=']
-        return str(avail_symbols[random.randint(0, len(avail_symbols)-1)])
+        return str(random.choice(avail_symbols))
 
     def start(self):
         #Ask the user what they would like to do.
-        #Currently there is only password generation.
-        self.generate_password()
-        print(self.get_password())
+        while(True):
+            select_tool = input('''Welcome to PasswordTools\nWhat would you like to do?
+                \n 1) Generate a new password.
+                \n 2) Change a password to l33tspeak.
+                \n 3) Check the strength of your password.
+                \n\nPlease enter 1, 2, or 3.
+                ''')
+            if (select_tool == '1'):
+                self.generate_password()
+                print(self.get_password())
+                break
+            elif (select_tool == '2'):
+                self.leet_mutation()
+                print(self.get_password())
+                break
+            elif (select_tool == '3'):
+                #self.check_strenght()
+                #break
+                print("Sorry, this tool hasn't been implemented yet.")
+            else:
+                print("Please enter 1, 2, or 3")
 
     def set_options(self):
         # Ask for desired password length
@@ -82,18 +100,36 @@ class PasswordTools:
             first_char.append(self.__get_upper)
         if(self.__get_lower in selected_options):
             first_char.append(self.__get_lower)
-        self.my_password = first_char[random.randint(0, len(first_char)-1)]()
+        self.my_password = random.choice(first_char)()
+        # self.my_password = first_char[random.randint(0, len(first_char)-1)]()
 
         # Loop through remaining length
         counter = 1
-        while(counter < pass_len):
-            self.my_password += selected_options[random.randint(0, len(selected_options)-1)]()
+        while(counter < self.pass_len):
+            self.my_password += random.choice(selected_options)()
+            # self.my_password += selected_options[random.randint(0, len(selected_options)-1)]()
             counter += 1
 
     def get_password(self):
         return self.my_password
 
-# TODO Calculate password strength
-# TODO mutate a password into 1337spk
+    # Ask for a password and mutate it into l33tspeak
+    def leet_mutation(self):
+        self.my_password = input("Enter the password you wish to mutate")
+        leet_map = {
+            'a': ['4', '@', '/-\\'], 'c': ['('], 'd': ['|)'], 'e': ['3'],
+            'f': ['ph'], 'h': [']-[', '|-|'], 'i': ['1', '!', '|'], 'k': [']<'],
+            'o': ['0'], 's': ['$', '5'], 't': ['7', '+'], 'u': ['|_|'],
+            'v': ['\\/']
+            }
+        leet_pass = ""
+        for char in self.my_password:
+            if (char.lower() in leet_map):
+                leet_pass += random.choice(leet_map[char.lower()])
+            else:
+                leet_pass += char.lower()
+        self.my_password = leet_pass
+        
+# TODO Calculate password strength        
 
 PasswordTools().start()
