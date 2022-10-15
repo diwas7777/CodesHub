@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=435&height=80&lines=CodesHub)](https://github.com/diwas777777/CodesHub)
+# <div align="center">[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=435&height=80&lines=CodesHub)](https://github.com/diwas777777/CodesHub)</div>
 This open source project is made to help students find codes in different languages easily for every usecase.
 
 # Special Note For Everyone
@@ -64,7 +64,7 @@ This open source project is made to help students find codes in different langua
 - This year, only the first 40,000 participants will recieve swags.
 ---
 
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
+# <div align="center">[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=800&height=100&lines=Hacktoberfest+2022+Holopin+Badge)](https://hacktoberfest.com/)</div>
 
 [![@diwas7777's Holopin board](https://holopin.me/diwas7777)](https://holopin.io/@diwas7777)
 
