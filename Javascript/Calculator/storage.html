@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <p>Anda sudah menekan tombol sebanyak <span id = "count">0</span> kali</p>
+    <button id="button">Klik disini</button>
+    <button id="clearButton">clear</button>
+
+    <script>
+        const cacheKey = 'Number';
+        if(typeof(Storage) != 'undefined'){
+
+            if(localStorage.getItem(cacheKey) === "undefined"){
+                localStorage.setItem(cacheKey, 0);
+            }
+
+            const button = document.querySelector('#button');
+            const clearButton = document.querySelector('#clearButton')
+            const count = document.querySelector('#count');
+            count.innerHTML = localStorage.getItem(cacheKey);
+            button.addEventListener('click', function(event) {
+                let number = localStorage.getItem(cacheKey);
+                number++;
+                localStorage.setItem(cacheKey, number);
+                count.innerHTML = localStorage.getItem(cacheKey);
+            });
+
+            clearButton.addEventListener('click', function(event){
+                localStorage.removeItem(cacheKey);
+                count.innerHTML = 0;
+                // console.log(localStorage.getItem(cacheKey))
+                // alert('as')
+            })
+        }else{
+            alert("Brower tidak mendukung storage")
+        }
+    </script>
+
+</body>
+</html>

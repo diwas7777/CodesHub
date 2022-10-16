@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="result">
+        <p id="number">0</p>
+      </div>
+      <div class="flex-column">
+        <div class="flex-row">
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box bg-yellow negative">+/-</div>
+        </div>
+        <div class="flex-row">
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box bg-yellow operator">-</div>
+        </div>
+        <div class="flex-row">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box bg-yellow operator">+</div>
+        </div>
+        <div class="flex-row">
+          <div class="box clear">CE</div>
+          <div class="box">0</div>
+          <div class="box double bg-yellow equals" id="hitung">=</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          Riwayat Perhitungan
+        </div>
+        <table id="historyList">
+          <tr>
+            <th>Angka Pertama</th>
+            <th>Operator</th>
+            <th>Agka Kedua</th>
+            <th>Hasil</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="storage.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
