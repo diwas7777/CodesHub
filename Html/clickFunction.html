@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Click</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .center{
+            height: 100px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+        .center:hover{
+            background-color: rebeccapurple;
+            border-radius: 30px;
+        }
+        .center button{
+            height: 30px;
+            width: 80px;
+            border-color: aqua;
+            border-radius: 10px;
+            background-color: purple;
+            color: white;
+        }
+
+        .center button:hover{
+            background-color: white;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <button onclick="clickMe()">Click Here</button>
+
+
+        <script>
+            function clickMe(){
+                alert('Hey You CLick ME')
+            }
+        </script>
+    </div>
+</body>
+</html>
