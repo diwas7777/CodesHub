@@ -1,0 +1,45 @@
+<html>
+<body> 
+    <p style="font-size: 40px;">
+        <script>
+            var a = 2
+            var b = 6
+
+            function sum (num1, num2) 
+            {
+                return num1 + num2
+            }
+            function multiply (num1, num2) 
+            {
+                return num1 * num2
+            }
+            function divide (num1, num2) 
+            {
+                if (num1 > num2)
+                {
+                    return num1 / num2
+                }
+                else
+                {
+                    return num2 / num1
+                }
+            }
+            function difference (num1, num2) 
+            {
+                if (num1 > num2)
+                {
+                    return num1 - num2
+                }
+                else
+                {
+                    return num2 - num1
+                }
+            }
+            document.write("The sum of given numbers is : " + sum(a,b) + "<br>")
+            document.write("The product of given numbers is : " + multiply(a,b) + "<br>")
+            document.write("The quotient of numbers is : " + divide(a,b) + "<br>")
+            document.write("The difference of numbers is : " + difference(a,b) + "<br>")
+        </script>
+   </p> 
+</body>
+</html>
