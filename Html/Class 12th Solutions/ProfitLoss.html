@@ -1,0 +1,27 @@
+<html>
+<body> 
+    <p style="font-size: 40px;">
+        <script>
+            //Write a JS and HTML code to input cost price and sales price and find the profit or loss.
+
+            /*
+            *this code doest not aim to result output for condition of neither profit or loss
+            *if there is no profit of even a single penny then it is considered to be loss 
+            * there is no neutral condition
+            * if you want to consider neutral condition you may add an else if by yourself
+            */
+
+
+            //take input from user
+            var CP = prompt("Enter a cost price")
+            var SP = prompt("Enter a selling price")
+            
+            if (SP>CP){  //this is the condition for profit i.e. SP greater than CP
+                document.write("Profit")  
+            } else{ 
+                document.write("Loss") //obvious answer if there is no profit
+            } 
+        </script>
+   </p> 
+</body>
+</html>
