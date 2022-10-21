@@ -1,6 +1,6 @@
 remote_theme: pages-themes/cayman@v0.2.0
 show_downloads: false
-title: Codes Hub
+title: CodesHub
 plugins:
   - jekyll-relative-links
 description: CodesHub is made to help students find codes in different languages easily for every usecase.
