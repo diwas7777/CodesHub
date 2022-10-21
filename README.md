@@ -1,5 +1,8 @@
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=435&height=80&lines=CodesHub)](https://github.com/diwas777777/CodesHub)
-This open source project is made to help students find codes in different languages easily for every usecase.
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=250&height=80&lines=CodesHub" />
+<p><i>This open source project is made to help students find codes in different languages easily for every usecase.</i></p>
+</div>
+
 
 # Special Note For Everyone
 ```py
@@ -13,7 +16,9 @@ This open source project is made to help students find codes in different langua
     Happy Hacking
 '''
 ```
-<h1 align="center"> Hacktoberfest 2022 🎉</h1>
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=535&height=80&lines=Hacktoberfest+2022+🎉" />
+</div>
 
 <div align="center">
   
@@ -26,15 +31,17 @@ This open source project is made to help students find codes in different langua
 
 </div>
 
+![hacktoberfest-banner](https://user-images.githubusercontent.com/60167999/192787587-62a13aa7-1317-4bd5-a4b7-13f8bf336c6a.jpg)
+
 ### 🗣 Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2022 challenge and earn a limited edition T-shirt.
-📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
+📢 **[Register here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 # Do give us a Star
 
 # Contributions Code of Conduct📚:
 - Add a new unique program.
-- It should be in .py extenstion.
+- It should have proper extenstion.
 - Check for typos and comment mistake in the code.
-- Please run the program and check for any errors before making the PR .
+- Please run the program and check for any errors before making the PR.
 - Review other PR's as well.
 - Do not spam, make sure to include all the programs you want to add in one PR.
 - Do not remove other's content.
@@ -64,10 +71,13 @@ This open source project is made to help students find codes in different langua
 - This year, only the first 40,000 participants will recieve swags.
 ---
 
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=435&height=100&lines=Hacktoberfest+2022)](https://hacktoberfest.com/)
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=800&height=100&lines=Hacktoberfest+2022+Holopin+Badge" />
+</div>
+
+[![@diwas7777's Holopin board](https://holopin.me/diwas7777)](https://holopin.io/@diwas7777)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Register+here)](https://hacktoberfest.com)
-![hacktoberfest-banner](https://user-images.githubusercontent.com/60167999/192787587-62a13aa7-1317-4bd5-a4b7-13f8bf336c6a.jpg)
 
 # :handshake: Our Contributors
 
