@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main() {
+  int f1=0,f2=1,f3,n;
+  printf("Enter a number for generating fibonacci series :");
+  scanf("%d", &n);
+  printf("The fibonacci series is : %d %d", f1,f2);
+  for(f3=1;f3<=n;f3=f1+f2) {
+    printf(" %d", f3);
+    f1=f2;
+    f2=f3;
+  }
+}

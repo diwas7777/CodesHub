@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() {
+  int a,b,i,c=0,j;
+  printf("Enter two numbers: ");
+  scanf("%d %d",&a,&b);
+  printf("Prime numbers between %d and %d are : ",a,b);
+  for(i=a;i<=b;i++){
+    c=0;
+    for(j=1;j<=i;j++) {
+      if(i%j==0)
+      c++;
+    }
+    if(c==2)
+    printf("%d ",i);
+  }
+  printf("\n");
+}
