@@ -3,6 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Shuffle the array of ascii chars with a key
 void Encrypt_Decrypt(char *array, char *string, long int key)
 {
     int i, j;
@@ -20,6 +21,7 @@ int main()
     char array[100] = " ", sarray[100] = " ", string[1000] = " ", result[1000] = " ", choice = ' ';
     long int key = 0; 
     int i = 0, j = 0;
+    // Create an array of ascii chars
     for (i = 32; i < 127; i++)
     {
         array[i - 32] = i;
@@ -43,6 +45,7 @@ choose:
         }
         else
         {
+            // Generate random key
             srand(time(NULL));
             for (i = 0; i <= 500; i++)
             {
@@ -70,6 +73,7 @@ choose:
         goto choose;
     }
 
+    // Match the initial array with shuffeled array to encrypt ans decrypt a string
     for (i = 0; i < strlen(string); i++)
     {
         for (j = 0; j < strlen(array); j++)
