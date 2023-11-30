@@ -1,8 +1,10 @@
-def area(lenght,breadth):
-    ar= int(lenght)*int(breadth)
-    return ar
+def area(length: int,breadth: int):
+    """
+    Function to find area of rectangle
+    """
+    return length*breadth
 
-l= input("enter the length of rectangle : ")
-b= input("enter the breadth of the rectangle : ")
-
-print(area(l,b))
+if __name__ == "__main__":
+    l = int(input("enter the length of rectangle : "))
+    b = int(input("enter the breadth of the rectangle : "))
+    print(area(l,b))
