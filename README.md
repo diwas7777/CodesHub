@@ -17,12 +17,12 @@
 '''
 ```
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=535&height=80&lines=Hacktoberfest+2022+🎉" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&multiline=true&width=535&height=80&lines=Hacktoberfest+2024+🎉" />
 </div>
 
 <div align="center">
   
-<img src="https://img.shields.io/badge/hacktoberfest-2022-blueviolet" alt="Hacktober Badge"/>
+<img src="https://img.shields.io/badge/hacktoberfest-2024-blueviolet" alt="Hacktober Badge"/>
  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
  <a href="https://github.com/diwas777777/CodesHub" ><img src="https://img.shields.io/badge/Contributions-welcome-violet.svg?style=flat&logo=git" alt="Contributions" /></a>
 <a href="https://github.com/diwas777777/CodesHub/pulls"><img src="https://img.shields.io/github/issues-pr/diwas777777/CodesHub" alt="Pull Requests Badge"/></a>
@@ -33,7 +33,7 @@
 
 ![hacktoberfest-banner](https://user-images.githubusercontent.com/60167999/192787587-62a13aa7-1317-4bd5-a4b7-13f8bf336c6a.jpg)
 
-### 🗣 Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2022 challenge and earn a limited edition T-shirt.
+### 🗣 Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2024 challenge and earn a limited edition T-shirt.
 📢 **[Register here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 # Do give us a Star
 
@@ -50,11 +50,11 @@
 - If you want to add code of a language whose folder is not present,make a new folder and upload the code inside that folder and make a MR.
 
 > Upload your code in this repository to particular section.If folder is not present make a new folder and add code.
-> More repositories for contribution in Hacktoberfest 2022.
+> More repositories for contribution in Hacktoberfest 2024.
 
 | Repository                                                  | Issues                                                                                                                                                           | Pull Requests                                                                                                                                                     | Forks                                                                                                                                                             |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ CodesHub Repository for Hacktoberfest-2022](https://github.com/diwas777777/CodesHub)         | [![GitHub issues](https://img.shields.io/github/issues/diwas777777/CodesHub?color=pink&logo=github)](https://github.com/diwas777777/CodesHub/issues)         | [![GitHub PRs](https://img.shields.io/github/issues-pr/diwas777777/CodesHub)](https://github.com/diwas777777/CodesHub/pulls)         | [![GitHub forks](https://img.shields.io/github/forks/diwas777777/CodesHub?logo=git)](https://github.com/diwas777777/CodesHub/fork)                         |
+| [ CodesHub Repository for Hacktoberfest-2024](https://github.com/diwas777777/CodesHub)         | [![GitHub issues](https://img.shields.io/github/issues/diwas777777/CodesHub?color=pink&logo=github)](https://github.com/diwas777777/CodesHub/issues)         | [![GitHub PRs](https://img.shields.io/github/issues-pr/diwas777777/CodesHub)](https://github.com/diwas777777/CodesHub/pulls)         | [![GitHub forks](https://img.shields.io/github/forks/diwas777777/CodesHub?logo=git)](https://github.com/diwas777777/CodesHub/fork)                         |
 
 ## Rules
 
@@ -72,7 +72,7 @@
 ---
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=800&height=100&lines=Hacktoberfest+2022+Holopin+Badge" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&multiline=true&width=800&height=100&lines=Hacktoberfest+2024+Holopin+Badge" />
 </div>
 
 [![@diwas7777's Holopin board](https://holopin.me/diwas7777)](https://holopin.io/@diwas7777)
