@@ -35,22 +35,22 @@ class SnakeMovements:
   snpos = snake_pos
   
   snpos = None
-	def main(self):
-      if self.snpos == "up":
-        self.y = snake.ycor()
-        snake.sety(self.y + 15)
+def main(self):
+  if self.snpos == "up":
+      self.y = snake.ycor()
+      snake.sety(self.y + 15)
         
-      if self.snpos == "down":
-        self.y = snake.ycor()
-        snake.sety(self.y - 15)
+  if self.snpos == "down":
+    self.y = snake.ycor()
+    snake.sety(self.y - 15)
         
-      if self.snpos == "right":
-        self.x = snake.xcor()
-        snake.setx(self.x + 15)
+  if self.snpos == "right":
+    self.x = snake.xcor()
+    snake.setx(self.x + 15)
         
-      if self.snpos == "left":
-        self.x = snake.xcor()
-        snake.setx(self.x - 15)
+  if self.snpos == "left":
+    self.x = snake.xcor()
+    snake.setx(self.x - 15)
         
     def SnakeUp(self):
       self.snpos = "up"
