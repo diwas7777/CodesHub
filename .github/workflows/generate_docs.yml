@@ -3,35 +3,59 @@ name: Generate Docs Data
 on:
   push:
     branches:
-      - main  # Or your default branch, e.g., master
+      - main
+    paths:
+      - 'code_examples/**'
+      - 'docs/scripts/generate_site_data.py'
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
 
 jobs:
-  build:
+  generate_data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Allow workflow to commit to the repo
+      contents: write
+      pull-requests: write
+    
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 # Using v4 as it's generally available
-
-      - name: Set up Python
-        uses: actions/setup-python@v4 # Using v4
+        uses: actions/checkout@v4
         with:
-          python-version: '3.x' # Use a recent Python 3 version
-
-      - name: Run script to generate site data
+          fetch-depth: 0  # Needed for full Git history
+          
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: pip install pyyaml
+          
+      - name: Generate site data
         run: python docs/scripts/generate_site_data.py
-
-      - name: Commit and push if data changed
+        
+      - name: Create Pull Request if data changed
+        id: create-pr
+        if: github.ref == 'refs/heads/main'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Automated update: Regenerated site data"
+          title: "Update generated site data"
+          body: "Automatically generated updates to site data based on code changes"
+          branch: "update/site-data"
+          delete-branch: true
+          labels: "automated"
+          
+      - name: Direct commit for small changes
+        if: steps.create-pr.outputs.pr-number == ''
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          # Stage site_data.json. Add other files if the script modifies/creates them.
           git add docs/site_data.json
-          # Check if there are staged changes
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Automated docs data update via GitHub Actions"
+            git commit -m "Automated update: Regenerated site data [skip ci]"
             git push
           fi

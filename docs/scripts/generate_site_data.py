@@ -1,120 +1,170 @@
+#!/usr/bin/env python3
 import os
 import json
 import subprocess
+from datetime import datetime
+from collections import defaultdict
 
-def get_language_data():
-    """
-    Scans the root directory of the repository for language directories,
-    and then lists the top-level contents of each language directory.
-    Excludes common non-language directories and files, as well as
-    common build/dependency folders within each language directory.
-    """
-    script_dir = os.path.dirname(__file__)
-    repo_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
-    
-    # Exclusions for top-level (repo root) items
-    top_level_excluded_items = {'.git', '.github', 'docs', 'README.md', 'LICENSE'}
-    
-    # Exclusions for items within each language directory
-    inner_excluded_items = {'__pycache__', 'node_modules', 'target', 'build', 'dist', '.DS_Store'}
-
-    languages_data = []
-    
+def get_git_history():
+    """Get real Git commit history for recent activity"""
     try:
-        # First, identify the main language directories
-        for item_name in os.listdir(repo_root):
-            item_path = os.path.join(repo_root, item_name)
-            if os.path.isdir(item_path) and \
-               not item_name.startswith('.') and \
-               not item_name.startswith('_') and \
-               item_name not in top_level_excluded_items:
-                
-                # Now, scan the contents of this language directory
-                language_dir_path = item_path # This is already the absolute path
-                current_language_files = []
-                try:
-                    for sub_item_name in os.listdir(language_dir_path):
-                        if not sub_item_name.startswith('.') and \
-                           sub_item_name not in inner_excluded_items:
-                            current_language_files.append(sub_item_name)
-                    
-                    if current_language_files: # Only add if there are files/subdirs to list
-                        languages_data.append({
-                            "name": item_name,
-                            "files": sorted(current_language_files)
-                        })
-                    else:
-                        # Optionally, still add the language if it's empty but detected
-                        languages_data.append({
-                            "name": item_name,
-                            "files": []
-                        })
+        cmd = ['git', 'log', '--pretty=format:%an|%s|%cd', '--date=short', '-n', '5', '--', 'code_examples/']
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        activity = []
+        
+        for line in result.stdout.split('\n'):
+            if not line.strip():
+                continue
+            try:
+                author, message, date = line.split('|', 2)
+                activity.append({
+                    "author": author,
+                    "message": message,
+                    "date": date
+                })
+            except ValueError:
+                continue
+        
+        return activity
+    except Exception as e:
+        print(f"Error getting Git history: {e}")
+        # Fallback to mock data
+        return get_mock_activity()
 
-                except OSError as e:
-                    print(f"Error scanning language directory {language_dir_path}: {e}")
-                    # Add language with empty files list if scanning fails for some reason
-                    languages_data.append({
-                        "name": item_name,
-                        "files": []
-                    })
+def get_mock_activity():
+    """Fallback mock activity data"""
+    authors = ["diwas777777", "octocat", "devuser1", "coder123"]
+    actions = [
+        "Added new examples for",
+        "Updated documentation for",
+        "Fixed bugs in",
+        "Refactored code for",
+        "Improved performance of"
+    ]
+    
+    recent_activity = []
+    for i in range(5):
+        recent_activity.append({
+            "author": authors[i % len(authors)],
+            "message": f"{actions[i % len(actions)]} {['Python', 'JavaScript', 'C++'][i % 3]}",
+            "date": (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
+        })
+    
+    return recent_activity
 
-    except OSError as e:
-        print(f"Error listing repository root: {e}")
-        return [] # Return empty if repo root scan fails
-
-    return sorted(languages_data, key=lambda x: x['name'])
-
-
-def get_recent_commits():
-    """
-    Fetches the last 10 commit messages from the git log.
-    """
-    script_dir = os.path.dirname(__file__)
-    repo_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+def count_file_lines(filepath):
+    """Count lines in a file efficiently"""
     try:
-        result = subprocess.run(
-            ['git', 'log', '--pretty=format:%h - %an, %ar : %s', '-n', '10'],
-            capture_output=True,
-            text=True,
-            check=True,
-            cwd=repo_root
-        )
-        commits = result.stdout.strip().split('\n')
-        commits = [commit for commit in commits if commit] # Filter out empty strings
-        return commits
-    except subprocess.CalledProcessError as e:
-        print(f"Error executing git log: {e}")
-        print(f"Stderr: {e.stderr}")
-        return []
-    except FileNotFoundError:
-        print("Error: git command not found. Please ensure git is installed and in PATH.")
-        return []
+        with open(filepath, 'r') as f:
+            return sum(1 for _ in f)
+    except:
+        return 0
 
-if __name__ == "__main__":
-    language_details = get_language_data()
-    recent_commits = get_recent_commits()
-
-    site_data = {
-        "languages": language_details,
-        "commits": recent_commits
+def get_file_info(root, filename):
+    """Get detailed information about a code file"""
+    filepath = os.path.join(root, filename)
+    return {
+        "name": filename,
+        "size": os.path.getsize(filepath),
+        "lines": count_file_lines(filepath),
+        "last_modified": datetime.fromtimestamp(os.path.getmtime(filepath)).strftime('%Y-%m-%d')
     }
 
-    script_dir = os.path.dirname(__file__)
-    output_path = os.path.abspath(os.path.join(script_dir, "..", "site_data.json"))
+def scan_code_examples(code_examples_dir):
+    """Scan the code examples directory and return structured data"""
+    languages = []
+    
+    for lang_dir in sorted(os.listdir(code_examples_dir)):
+        lang_path = os.path.join(code_examples_dir, lang_dir)
+        if not os.path.isdir(lang_path):
+            continue
+        
+        lang_files = []
+        supported_extensions = ('.py', '.js', '.java', '.c', '.cpp', '.cs', 
+                              '.go', '.rs', '.php', '.html', '.ts', '.sh')
+        
+        for root, _, files in os.walk(lang_path):
+            for filename in sorted(files):
+                if filename.endswith(supported_extensions):
+                    try:
+                        file_info = get_file_info(root, filename)
+                        lang_files.append(file_info)
+                    except Exception as e:
+                        print(f"Error processing {filename}: {e}")
+                        continue
+        
+        if lang_files:
+            languages.append({
+                "name": lang_dir.capitalize(),
+                "icon": get_language_icon(lang_dir),
+                "files": lang_files,
+                "total_size": sum(f["size"] for f in lang_files),
+                "total_lines": sum(f["lines"] for f in lang_files)
+            })
+    
+    return languages
 
+def get_language_icon(lang_name):
+    """Get appropriate icon for each language"""
+    icons = {
+        'python': '🐍',
+        'javascript': 'JS',
+        'java': '☕',
+        'c': 'C',
+        'cpp': 'C++',
+        'csharp': 'C#',
+        'go': 'Go',
+        'rust': '🦀',
+        'php': 'PHP',
+        'html': 'HTML',
+        'typescript': 'TS',
+        'bash': '💻'
+    }
+    return icons.get(lang_name.lower(), lang_name.upper()[:2])
+
+def generate_site_data():
+    """Generate the complete site data structure"""
+    code_examples_dir = "code_examples"
+    os.makedirs(code_examples_dir, exist_ok=True)
+    
+    return {
+        "last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "languages": scan_code_examples(code_examples_dir),
+        "recent_activity": get_git_history(),
+        "stats": {
+            "total_languages": 0,  # Will be updated after
+            "total_files": 0,      # Will be updated after
+            "total_lines": 0       # Will be updated after
+        }
+    }
+
+def main():
     try:
+        print("Generating site data...")
+        data = generate_site_data()
+        
+        # Calculate statistics
+        data["stats"]["total_languages"] = len(data["languages"])
+        data["stats"]["total_files"] = sum(len(lang["files"]) for lang in data["languages"])
+        data["stats"]["total_lines"] = sum(lang["total_lines"] for lang in data["languages"])
+        
+        # Write to site_data.json
+        output_dir = "docs"
+        output_path = os.path.join(output_dir, "site_data.json")
+        os.makedirs(output_dir, exist_ok=True)
+        
         with open(output_path, 'w') as f:
-            json.dump(site_data, f, indent=4)
-        print(f"Site data generated successfully at {output_path}")
-    except IOError as e:
-        print(f"Error writing site data to JSON file: {e}")
+            json.dump(data, f, indent=2)
+        
+        print(f"Successfully generated {output_path}")
+        print(f"Stats: {data['stats']['total_languages']} languages, "
+              f"{data['stats']['total_files']} files, "
+              f"{data['stats']['total_lines']} lines of code")
+        
+    except Exception as e:
+        print(f"Error generating site data: {e}")
+        raise
 
-    # For debugging, you can uncomment these lines:
-    # print("\n--- Debugging Info ---")
-    # print(f"Script location: {__file__}")
-    # print(f"Script directory: {script_dir}")
-    # print(f"Calculated repo root: {os.path.abspath(os.path.join(script_dir, '..', '..'))}")
-    # print(f"Output path for JSON: {output_path}")
-    # print("Generated site_data content:")
-    # print(json.dumps(site_data, indent=4))
-    # print("--- End Debugging Info ---")
+if __name__ == "__main__":
+    from datetime import timedelta 
+    main()
