@@ -1,0 +1,37 @@
+name: Generate Docs Data
+
+on:
+  push:
+    branches:
+      - main  # Or your default branch, e.g., master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allow workflow to commit to the repo
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Using v4 as it's generally available
+
+      - name: Set up Python
+        uses: actions/setup-python@v4 # Using v4
+        with:
+          python-version: '3.x' # Use a recent Python 3 version
+
+      - name: Run script to generate site data
+        run: python docs/scripts/generate_site_data.py
+
+      - name: Commit and push if data changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          # Stage site_data.json. Add other files if the script modifies/creates them.
+          git add docs/site_data.json
+          # Check if there are staged changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated docs data update via GitHub Actions"
+            git push
+          fi
