@@ -8,7 +8,7 @@ on:
       - 'code_examples/**'
       - 'docs/scripts/generate_site_data.py'
   schedule:
-    - cron: '0 0 * * *' 
+    - cron: '0 0 * * *'  
 
 jobs:
   generate_data:
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Needed for full Git history
+          fetch-depth: 0  
           
       - name: Set up Python
         uses: actions/setup-python@v4
