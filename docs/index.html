@@ -890,50 +890,78 @@
         };
 
         // Fetch and display data
-        document.addEventListener('DOMContentLoaded', async () => {
-            try {
-                const response = await fetch('site_data.json');
-                const data = await response.json();
+        document.addEventListener('DOMContentLoaded', () => {
+            const languagesGrid = document.getElementById('languages-grid');
+            const activityList = document.getElementById('activity-list');
+            const totalLanguagesEl = document.getElementById('total-languages');
+            const totalExamplesEl = document.getElementById('total-examples');
 
-                // Update stats
-                document.getElementById('total-languages').textContent = data.languages.length;
-                const totalExamples = data.languages.reduce((sum, lang) => sum + lang.files.length, 0);
-                                document.getElementById('total-examples').textContent = totalExamples;
+            fetch('site_data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Validate and populate languages
+                    if (Array.isArray(data.languages) && data.languages.length > 0) {
+                        document.getElementById('total-languages').textContent = data.languages.length;
+                        const totalExamples = data.languages.reduce((sum, lang) => sum + (lang.files ? lang.files.length : 0), 0);
+                        document.getElementById('total-examples').textContent = totalExamples;
 
-                // Populate language cards
-                const languagesGrid = document.getElementById('languages-grid');
-                data.languages.forEach(language => {
-                    const card = document.createElement('div');
-                    card.className = 'language-card fade-in';
-                    card.innerHTML = `
-                        <div class="language-header">
-                            <div class="language-icon">${languageIcons[language.name] || language.name.charAt(0)}</div>
-                            <h3 class="language-name">${language.name}</h3>
-                            <span class="language-count">${language.files.length} examples</span>
-                        </div>
-                        <p class="language-description">${languageDescriptions[language.name] || 'Explore various code examples in this programming language.'}</p>
-                    `;
-                    card.addEventListener('click', () => openLanguageModal(language));
-                    languagesGrid.appendChild(card);
+                        data.languages.forEach(language => {
+                            const card = document.createElement('div');
+                            card.className = 'language-card fade-in';
+                            card.innerHTML = `
+                                <div class="language-header">
+                                    <div class="language-icon">${language.icon || language.name.charAt(0)}</div>
+                                    <h3 class="language-name">${language.name}</h3>
+                                    <span class="language-count">${language.files ? language.files.length : 0} examples</span>
+                                </div>
+                                <p class="language-description">${languageDescriptions[language.name] || 'Explore various code examples in this programming language.'}</p>
+                            `;
+                            card.addEventListener('click', () => openLanguageModal(language));
+                            languagesGrid.appendChild(card);
+                        });
+                        animateCountUp(totalLanguagesEl, data.languages.length);
+                        animateCountUp(totalExamplesEl, totalExamples);
+                    } else {
+                        console.warn('No language data found or data is not in expected format.');
+                        languagesGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 2rem;"><p style="color: var(--text-secondary);">No languages to display.</p></div>`;
+                        animateCountUp(totalLanguagesEl, 0);
+                        animateCountUp(totalExamplesEl, 0);
+                    }
+
+                    // Validate and populate recent activity
+                    if (Array.isArray(data.recent_activity) && data.recent_activity.length > 0) {
+                        data.recent_activity.forEach(activity => {
+                            const item = document.createElement('div');
+                            item.className = 'activity-item fade-in';
+                            item.innerHTML = `
+                                <div class="activity-icon">${activity.author ? activity.author.charAt(0) : '?'}</div>
+                                <div class="activity-content">
+                                    <div class="activity-message">${activity.message || 'No message'}</div>
+                                    <div class="activity-meta">${activity.author || 'Unknown author'} • ${activity.date || 'No date'}</div>
+                                </div>
+                            `;
+                            activityList.appendChild(item);
+                        });
+                    } else {
+                        console.warn('No recent activity found or data is not in expected format.');
+                        activityList.innerHTML = `<div style="text-align: center; padding: 2rem;"><p style="color: var(--text-secondary);">No recent activity to display.</p></div>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching or parsing site_data.json:', error);
+                    languagesGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 2rem;"><p style="color: var(--text-secondary);">Could not load language data. Please check the console for errors.</p></div>`;
+                    activityList.innerHTML = `<div style="text-align: center; padding: 2rem;"><p style="color: var(--text-secondary);">Could not load recent activity. Please check the console for errors.</p></div>`;
+                    animateCountUp(totalLanguagesEl, 0);
+                    animateCountUp(totalExamplesEl, 0);
                 });
 
-                // Populate recent activity
-                const activityList = document.getElementById('activity-list');
-                data.recent_activity.forEach(activity => {
-                    const item = document.createElement('div');
-                    item.className = 'activity-item fade-in';
-                    item.innerHTML = `
-                        <div class="activity-icon">${activity.author.charAt(0)}</div>
-                        <div class="activity-content">
-                            <div class="activity-message">${activity.message}</div>
-                            <div class="activity-meta">${activity.author} • ${activity.date}</div>
-                        </div>
-                    `;
-                    activityList.appendChild(item);
-                });
-
-                // Modal functionality
-                const modalOverlay = document.getElementById('modal-overlay');
+            // Modal functionality (remains outside the fetch chain)
+            const modalOverlay = document.getElementById('modal-overlay');
                 const closeModal = document.getElementById('close-modal');
 
                 closeModal.addEventListener('click', () => {
@@ -956,7 +984,7 @@
                     language.files.forEach(file => {
                         const fileItem = document.createElement('div');
                         fileItem.className = 'file-item';
-                        fileItem.textContent = file;
+                        fileItem.textContent = file.name;
                         fileGrid.appendChild(fileItem);
                     });
                     
@@ -977,18 +1005,11 @@
                     }, 20);
                 }
 
-                animateCountUp(document.getElementById('total-languages'), data.languages.length);
-                animateCountUp(document.getElementById('total-examples'), totalExamples);
+                animateCountUp(totalLanguagesEl, data.languages ? data.languages.length : 0);
+                animateCountUp(totalExamplesEl, Array.isArray(data.languages) ? data.languages.reduce((sum, lang) => sum + (lang.files ? lang.files.length : 0), 0) : 0);
 
-            } catch (error) {
-                console.error('Error loading data:', error);
-                // Fallback content if data fails to load
-                document.getElementById('languages-grid').innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 2rem;">
-                        <p style="color: var(--text-secondary);">Unable to load language data. Please try again later.</p>
-                    </div>
-                `;
-            }
+            // The main try-catch is replaced by the .catch in fetch chain for data loading errors.
+            // Other general JS errors would still be caught by browser if not handled specifically.
         });
     </script>
 </body>

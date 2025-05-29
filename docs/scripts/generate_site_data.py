@@ -8,7 +8,7 @@ from collections import defaultdict
 def get_git_history():
     """Get real Git commit history for recent activity"""
     try:
-        cmd = ['git', 'log', '--pretty=format:%an|%s|%cd', '--date=short', '-n', '5', '--', 'code_examples/']
+        cmd = ['git', 'log', '--pretty=format:%an|%s|%cd', '--date=short', '-n', '5']
         result = subprocess.run(cmd, capture_output=True, text=True)
         activity = []
         
@@ -23,6 +23,7 @@ def get_git_history():
                     "date": date
                 })
             except ValueError:
+                print(f"Warning: Skipping malformed git log line: {line}")
                 continue
         
         return activity
@@ -70,16 +71,21 @@ def get_file_info(root, filename):
         "last_modified": datetime.fromtimestamp(os.path.getmtime(filepath)).strftime('%Y-%m-%d')
     }
 
-def scan_code_examples(code_examples_dir):
-    """Scan the code examples directory and return structured data"""
+def scan_code_examples(base_dir):
+    """Scan the base directory for language directories and return structured data"""
     languages = []
-    
-    for lang_dir in sorted(os.listdir(code_examples_dir)):
-        lang_path = os.path.join(code_examples_dir, lang_dir)
-        if not os.path.isdir(lang_path):
-            continue
-        
-        lang_files = []
+    excluded_dirs = ['.git', 'docs', '.github', 'site_data_files']
+
+    for item_name in sorted(os.listdir(base_dir)):
+        item_path = os.path.join(base_dir, item_name)
+        if os.path.isdir(item_path) and \
+           not item_name.startswith('.') and \
+           item_name not in excluded_dirs:
+            
+            lang_dir = item_name # item_name is now the language directory
+            lang_path = item_path # path to the language directory
+
+            lang_files = []
         supported_extensions = ('.py', '.js', '.java', '.c', '.cpp', '.cs', 
                               '.go', '.rs', '.php', '.html', '.ts', '.sh')
         
@@ -124,12 +130,11 @@ def get_language_icon(lang_name):
 
 def generate_site_data():
     """Generate the complete site data structure"""
-    code_examples_dir = "code_examples"
-    os.makedirs(code_examples_dir, exist_ok=True)
-    
+    base_dir = "../../"  # Point to the repository root
+
     return {
         "last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        "languages": scan_code_examples(code_examples_dir),
+        "languages": scan_code_examples(base_dir),
         "recent_activity": get_git_history(),
         "stats": {
             "total_languages": 0,  # Will be updated after
@@ -149,9 +154,16 @@ def main():
         data["stats"]["total_lines"] = sum(lang["total_lines"] for lang in data["languages"])
         
         # Write to site_data.json
-        output_dir = "docs"
-        output_path = os.path.join(output_dir, "site_data.json")
-        os.makedirs(output_dir, exist_ok=True)
+        # Determine the script's own directory
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        # Path to the 'docs' directory at the root of the project
+        # (which is one level up from 'scripts' directory)
+        docs_root_dir = os.path.join(script_dir, '..')
+        output_path = os.path.join(docs_root_dir, "site_data.json")
+        
+        # Ensure the target directory exists (it should, as part of the repo structure)
+        # but do not create it with this script if it's missing for some reason.
+        # os.makedirs(docs_root_dir, exist_ok=True) # This line is intentionally commented out / removed
         
         with open(output_path, 'w') as f:
             json.dump(data, f, indent=2)
