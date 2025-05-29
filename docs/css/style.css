@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0; /* Changed to 0, container will handle padding */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header { /* Added basic header styling */
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Added margin top/bottom */
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 { /* General h1, h2 styling */
+    color: #333;
+    margin-bottom: 0.7em;
+}
+
+section h2 { /* More specific for section headings */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.3em;
+    margin-top: 0; /* Remove default top margin for headings in sections */
+}
+
+/* h1 in header is already handled */
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    /* background-color: #fff; */ /* Removed, as .container handles this */
+}
+
+ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+ul#language-list li, ul#commit-list li {
+    padding: 8px 0;
+    border-bottom: 1px #eee solid;
+    font-size: 0.95em; /* Slightly smaller font for list items */
+}
+
+ul#language-list li:last-child, ul#commit-list li:last-child {
+    border-bottom: none;
+}
+
+footer { /* Added basic footer styling */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #eee;
+}

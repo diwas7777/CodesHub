@@ -1,0 +1,19 @@
+{
+    "languages": [
+        "C",
+        "C#",
+        "C++",
+        "Go",
+        "Html",
+        "Java",
+        "Javascript",
+        "PHP",
+        "Python",
+        "Rust",
+        "typescript"
+    ],
+    "commits": [
+        "b5d86b9 - google-labs-jules[bot], 1 second ago : Apply patch /tmp/64ceaf48-638a-4ce6-a47f-abe9c292fde1.patch",
+        "69a80b7 - Diwas Shrestha, 10 minutes ago : Merge pull request #326 from diwas7777/update-readme"
+    ]
+}
