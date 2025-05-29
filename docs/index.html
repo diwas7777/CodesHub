@@ -907,7 +907,7 @@
                     card.className = 'language-card fade-in';
                     card.innerHTML = `
                         <div class="language-header">
-                            <div class="language-icon">${languageIcons[language.name] || language.name.charAt(0)}</div>
+                            <div class="language-icon">${language.icon || language.name.charAt(0)}</div>
                             <h3 class="language-name">${language.name}</h3>
                             <span class="language-count">${language.files.length} examples</span>
                         </div>
@@ -956,7 +956,7 @@
                     language.files.forEach(file => {
                         const fileItem = document.createElement('div');
                         fileItem.className = 'file-item';
-                        fileItem.textContent = file;
+                        fileItem.textContent = file.name;
                         fileGrid.appendChild(fileItem);
                     });
                     
