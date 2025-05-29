@@ -1,72 +1,181 @@
+/* --- Base & Typography --- */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.65;
     margin: 0;
-    padding: 0; /* Changed to 0, container will handle padding */
-    background-color: #f4f4f4;
-    color: #333;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter body background */
+    color: #343a40; /* Darker text for better readability */
 }
 
-header { /* Added basic header styling */
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+header {
+    background: #343a40; /* Darker header for contrast */
+    color: #ffffff;
+    padding: 1.5rem 0; /* Increased padding */
     text-align: center;
+    margin-bottom: 20px; /* Space below header */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.25rem; /* Slightly larger */
+    font-weight: 500; /* Medium weight */
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto; /* Added margin top/bottom */
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 900px; /* Slightly wider container */
+    margin: 20px auto;
+    background: #ffffff; /* White background for content container */
+    padding: 25px; /* Increased padding */
+    border-radius: 8px; /* Softer radius */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Softer shadow */
 }
 
 h1, h2 { /* General h1, h2 styling */
-    color: #333;
-    margin-bottom: 0.7em;
+    color: #343a40; /* Consistent heading color */
+    margin-top: 0; /* Remove default top margin if not already handled */
+    margin-bottom: 0.75em;
+    font-weight: 500;
 }
 
 section h2 { /* More specific for section headings */
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.3em;
-    margin-top: 0; /* Remove default top margin for headings in sections */
+    border-bottom: 1px solid #dee2e6; /* Lighter border */
+    padding-bottom: 0.5em;
+    font-size: 1.75rem; /* Adjusted size */
 }
-
-/* h1 in header is already handled */
 
 section {
-    margin-bottom: 20px;
-    padding: 15px;
-    /* background-color: #fff; */ /* Removed, as .container handles this */
+    margin-bottom: 25px; /* Slightly more space between sections */
+    padding: 20px;
+    /* background-color: #fff; - Handled by .container */
 }
 
-ul {
+ul { /* General ul styling */
     list-style-type: none; 
     padding-left: 0; 
 }
 
-ul#language-list li, ul#commit-list li {
-    padding: 8px 0;
-    border-bottom: 1px #eee solid;
-    font-size: 0.95em; /* Slightly smaller font for list items */
+/* --- Commit List --- */
+ul#commit-list li {
+    padding: 10px 0; /* Increased padding */
+    border-bottom: 1px solid #e9ecef; /* Lighter border */
+    font-size: 0.9rem;
+    color: #495057; /* Softer text color */
 }
 
-ul#language-list li:last-child, ul#commit-list li:last-child {
+ul#commit-list li:last-child {
     border-bottom: none;
 }
 
-footer { /* Added basic footer styling */
+/* --- Language Cards --- */
+#language-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Increased gap */
+    justify-content: flex-start; /* Align to start for better flow */
+    padding-top: 15px;
+}
+
+.language-card {
+    background-color: #ffffff; /* White card background */
+    border: 1px solid #dee2e6; /* Standard border */
+    border-top: 4px solid #007bff; /* Primary color "tab" */
+    border-radius: 6px; /* Slightly less radius for a "sharper" card */
+    padding: 20px; /* Increased padding */
+    min-width: 180px; /* Adjusted min-width */
+    max-width: 220px; /* Adjusted max-width */
     text-align: center;
-    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.07); /* Subtler shadow */
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.language-card:hover {
+    transform: translateY(-4px); /* Slightly more lift */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+
+.language-card h3 {
+    margin: 0.5em 0 0.75em 0; /* Adjusted margins */
+    font-size: 1.3em;
+    color: #007bff; /* Primary color for language name */
+    font-weight: 500;
+}
+
+.language-card p.file-count {
+    font-size: 0.85em;
+    color: #6c757d; /* Secondary/accent color for file count */
+    margin: 0;
+}
+
+/* --- Language Details Section --- */
+.hidden {
+    display: none;
+}
+
+#language-details {
     margin-top: 30px;
-    font-size: 0.9em;
-    color: #666;
-    border-top: 1px solid #eee;
+    padding: 25px; /* Increased padding */
+    background-color: #f8f9fa; /* Light background, distinct from main container */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#language-details h2#language-detail-title { /* More specific selector */
+    margin-top: 0;
+    margin-bottom: 1em; /* Space below title */
+    color: #343a40;
+    font-size: 1.6rem; /* Adjusted size */
+    border-bottom: none; 
+    padding-bottom: 0; 
+}
+
+#language-file-list {
+    list-style-type: none; /* Removing default list style */
+    padding-left: 0;
+}
+
+#language-file-list li {
+    padding: 8px 10px; /* Padding for list items */
+    font-size: 0.95em;
+    color: #343a40;
+    border-bottom: 1px solid #e9ecef; /* Separator for items */
+    background-color: #ffffff; /* White background for list items */
+    border-radius: 4px; /* Slightly rounded corners for items */
+    margin-bottom: 5px; /* Space between items */
+}
+#language-file-list li:last-child {
+    border-bottom: none;
+}
+ 
+#close-details-button {
+   display: inline-block; /* Allows centering if text-align used on parent, or margin auto */
+   margin-top: 20px; /* Increased space */
+   padding: 10px 18px; /* Larger padding */
+   background-color: #007bff; /* Primary color */
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 0.95em;
+   font-weight: 500;
+   transition: background-color 0.2s ease-in-out;
+}
+
+#close-details-button:hover {
+   background-color: #0056b3; /* Darker primary on hover */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px; /* Increased space */
+    font-size: 0.85em;
+    color: #6c757d; /* Secondary/accent color */
+    border-top: 1px solid #dee2e6; /* Lighter border */
 }
