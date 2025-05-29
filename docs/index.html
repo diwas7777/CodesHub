@@ -3,57 +3,982 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Showcase - Documentation</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>CodesHub - Code Examples Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --secondary-color: #06b6d4;
+            --accent-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-accent: #f1f5f9;
+            --border-color: #e5e7eb;
+            --border-light: #f3f4f6;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --gradient-accent: linear-gradient(135deg, var(--accent-color), #ec4899);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--bg-primary);
+            padding: 4rem 0;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Language Cards */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .language-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .language-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .language-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
+        .language-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .language-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .language-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .language-count {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            background: var(--bg-accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            margin-left: auto;
+        }
+
+        .language-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Language Details Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 1rem;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .file-grid {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .file-item {
+            padding: 0.75rem 1rem;
+            background: var(--bg-accent);
+            border-radius: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            transition: background-color 0.3s ease;
+        }
+
+        .file-item:hover {
+            background: var(--border-color);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient-primary);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Recent Activity */
+        .activity-list {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+
+        .activity-item {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-item:hover {
+            background: var(--bg-accent);
+        }
+
+        .activity-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--gradient-primary);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.875rem;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-message {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .activity-meta {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* Contributing Section */
+        .contributing-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -1rem;
+            left: 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .step-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                margin: 1rem;
+                max-width: calc(100% - 2rem);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-accent);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Project Showcase!</h1>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CodesHub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="#contributing">Contributing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to CodesHub</h1>
+            <p>Your comprehensive collection of code examples across multiple programming languages. Learn, explore, and contribute to a growing community of developers.</p>
+            <div class="cta-buttons">
+                <a href="#languages" class="btn btn-primary">Explore Languages</a>
+                <a href="#contributing" class="btn btn-secondary">Start Contributing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-languages">0</span>
+                    <span class="stat-label">Programming Languages</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-examples">0</span>
+                    <span class="stat-label">Code Examples</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Open Source</span>
+                    <span class="stat-label">Community Driven</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">MIT</span>
+                    <span class="stat-label">Licensed</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
-        <main>
-            <section id="overview">
-                <h2>About This Repository</h2>
-                <p>This repository serves as a vibrant hub for developers of all skill levels, showcasing a diverse collection of code snippets, algorithms, data structures, and small projects across a multitude of programming languages. It's a testament to community collaboration and a fantastic resource for learning and exploration.</p>
-                <p><strong>Key Highlights:</strong></p>
-                <ul>
-                    <li><strong>Multi-Language Playground:</strong> From C to Python, JavaScript to Java, explore solutions in your favorite languages or discover new ones.</li>
-                    <li><strong>Practical Examples:</strong> Find implementations of common algorithms, data structures, and practical utilities.</li>
-                    <li><strong>Community-Driven:</strong> Contributions from a wide range of developers mean a constantly growing and evolving codebase.</li>
-                    <li><strong>Learning Resource:</strong> Whether you're a beginner looking for simple examples or an experienced developer exploring different approaches, there's something here for everyone.</li>
-                </ul>
-                <p>Dive into the languages featured and check out the latest contributions below!</p>
-            </section>
+        <!-- Languages Section -->
+        <section id="languages" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Programming Languages</h2>
+                <p class="section-subtitle">Explore our diverse collection of programming languages and their code examples. Click on any language to see detailed contents.</p>
+            </div>
+            <div class="languages-grid" id="languages-grid">
+                <!-- Language cards will be populated here -->
+            </div>
+        </section>
 
-            <section id="languages">
-                <h2>Languages Featured</h2>
-                <div id="language-cards-container">
-                    <!-- Language cards will be populated here by JavaScript -->
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-subtitle">What makes CodesHub your go-to resource for learning and exploring code</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Multi-Language Support</h3>
+                    <p class="feature-description">From C to Python, JavaScript to Rust - explore code examples in numerous programming languages, all in one place.</p>
                 </div>
-            </section>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Comprehensive Examples</h3>
+                    <p class="feature-description">Find algorithms, data structures, utility programs, and solutions to common programming problems with detailed implementations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Community Driven</h3>
+                    <p class="feature-description">Built by developers, for developers. Contributions from the community ensure a constantly growing and evolving codebase.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Learning Resource</h3>
+                    <p class="feature-description">Perfect for beginners learning new concepts or experienced developers exploring different approaches and techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Well Documented</h3>
+                    <p class="feature-description">Every code example comes with clear comments and explanations to help you understand the logic and implementation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Easy to Navigate</h3>
+                    <p class="feature-description">Organized structure makes it easy to find exactly what you're looking for, whether it's a specific algorithm or language example.</p>
+                </div>
+            </div>
+        </section>
 
-            <section id="language-details" class="hidden"> <!-- Initially hidden -->
-                <h2 id="language-detail-title">Language Details</h2>
-                <ul id="language-file-list">
-                    <!-- File/project list will be populated here by JavaScript -->
-                </ul>
-                <button id="close-details-button">Close</button>
-            </section>
+        <!-- Recent Activity Section -->
+        <section id="activity" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Recent Activity</h2>
+                <p class="section-subtitle">Stay updated with the latest contributions and changes to the repository</p>
+            </div>
+            <div class="activity-list" id="activity-list">
+                <!-- Recent commits will be populated here -->
+            </div>
+        </section>
 
-            <section id="recent-changes">
-                <h2>Recent Changes</h2>
-                <ul id="commit-list">
-                    <!-- Commits will be populated here by JavaScript -->
-                </ul>
-            </section>
-        </main>
+        <!-- Contributing Section -->
+        <section id="contributing" class="section">
+            <div class="section-header">
+                <h2 class="section-title">How to Contribute</h2>
+                <p class="section-subtitle">Join our community and help make CodesHub even better. Every contribution matters!</p>
+            </div>
+            <div class="contributing-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Fork the Repository</h3>
+                    <p class="step-description">Start by forking the CodesHub repository to your own GitHub account to create your personal copy.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Create a Branch</h3>
+                    <p class="step-description">Create a new branch with a descriptive name for your contribution (e.g., add-python-sorting-algorithms).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Make Changes</h3>
+                    <p class="step-description">Add your code examples, ensure they're well-commented, and follow the language-specific best practices.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Submit Pull Request</h3>
+                    <p class="step-description">Submit a pull request with a clear description of your changes and wait for review from our maintainers.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/diwas777777/CodesHub" class="btn btn-primary" target="_blank">View on GitHub</a>
+            </div>
+        </section>
     </div>
 
+    <!-- Language Details Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Language Details</h3>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="file-grid" id="file-grid">
+                    <!-- File list will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>Powered by Project Showcase</p>
+        <div class="footer-content">
+            <p class="footer-text">CodesHub - Empowering developers through shared knowledge</p>
+            <div class="footer-links">
+                <a href="https://github.com/diwas777777/CodesHub" target="_blank">GitHub</a>
+                <a href="https://github.com/diwas777777/CodesHub/issues" target="_blank">Issues</a>
+                <a href="https://github.com/diwas777777/CodesHub/pulls" target="_blank">Pull Requests</a>
+                <a href="https://github.com/diwas777777/CodesHub/blob/main/LICENSE" target="_blank">License</a>
+            </div>
+            <p style="opacity: 0.6; font-size: 0.875rem;">Licensed under GNU General Public License v2.0</p>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Language descriptions for better context
+        const languageDescriptions = {
+            'C': 'Low-level programming language perfect for system programming and embedded systems.',
+            'C++': 'Object-oriented programming language with high performance capabilities.',
+            'C#': 'Modern, type-safe object-oriented language for .NET development.',
+            'Python': 'Versatile, readable language ideal for data science, web development, and automation.',
+            'JavaScript': 'Dynamic language for web development, both frontend and backend.',
+            'Java': 'Enterprise-grade object-oriented language for cross-platform applications.',
+            'Go': 'Fast, statically typed language designed for modern computing.',
+            'Rust': 'Systems programming language focused on safety and performance.',
+            'PHP': 'Server-side scripting language widely used for web development.',
+            'Html': 'Markup language for creating web pages and applications.',
+            'typescript': 'TypeScript - JavaScript with static type definitions for better development experience.'
+        };
+
+        // Language icons mapping
+        const languageIcons = {
+            'C': 'C',
+            'C++': 'C++',
+            'C#': 'C#',
+            'Python': '🐍',
+            'JavaScript': 'JS',
+            'Java': '☕',
+            'Go': 'Go',
+            'Rust': '🦀',
+            'PHP': 'PHP',
+            'Html': 'HTML',
+            'typescript': 'TS'
+        };
+
+        // Fetch and display data
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('site_data.json');
+                const data = await response.json();
+
+                // Update stats
+                document.getElementById('total-languages').textContent = data.languages.length;
+                const totalExamples = data.languages.reduce((sum, lang) => sum + lang.files.length, 0);
+                                document.getElementById('total-examples').textContent = totalExamples;
+
+                // Populate language cards
+                const languagesGrid = document.getElementById('languages-grid');
+                data.languages.forEach(language => {
+                    const card = document.createElement('div');
+                    card.className = 'language-card fade-in';
+                    card.innerHTML = `
+                        <div class="language-header">
+                            <div class="language-icon">${languageIcons[language.name] || language.name.charAt(0)}</div>
+                            <h3 class="language-name">${language.name}</h3>
+                            <span class="language-count">${language.files.length} examples</span>
+                        </div>
+                        <p class="language-description">${languageDescriptions[language.name] || 'Explore various code examples in this programming language.'}</p>
+                    `;
+                    card.addEventListener('click', () => openLanguageModal(language));
+                    languagesGrid.appendChild(card);
+                });
+
+                // Populate recent activity
+                const activityList = document.getElementById('activity-list');
+                data.recent_activity.forEach(activity => {
+                    const item = document.createElement('div');
+                    item.className = 'activity-item fade-in';
+                    item.innerHTML = `
+                        <div class="activity-icon">${activity.author.charAt(0)}</div>
+                        <div class="activity-content">
+                            <div class="activity-message">${activity.message}</div>
+                            <div class="activity-meta">${activity.author} • ${activity.date}</div>
+                        </div>
+                    `;
+                    activityList.appendChild(item);
+                });
+
+                // Modal functionality
+                const modalOverlay = document.getElementById('modal-overlay');
+                const closeModal = document.getElementById('close-modal');
+
+                closeModal.addEventListener('click', () => {
+                    modalOverlay.classList.remove('active');
+                });
+
+                modalOverlay.addEventListener('click', (e) => {
+                    if (e.target === modalOverlay) {
+                        modalOverlay.classList.remove('active');
+                    }
+                });
+
+                function openLanguageModal(language) {
+                    const modalTitle = document.getElementById('modal-title');
+                    const fileGrid = document.getElementById('file-grid');
+                    
+                    modalTitle.textContent = `${language.name} Examples (${language.files.length})`;
+                    fileGrid.innerHTML = '';
+                    
+                    language.files.forEach(file => {
+                        const fileItem = document.createElement('div');
+                        fileItem.className = 'file-item';
+                        fileItem.textContent = file;
+                        fileGrid.appendChild(fileItem);
+                    });
+                    
+                    modalOverlay.classList.add('active');
+                }
+
+                // Count-up animation for stats
+                function animateCountUp(element, target) {
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            clearInterval(timer);
+                            current = target;
+                        }
+                        element.textContent = Math.floor(current);
+                    }, 20);
+                }
+
+                animateCountUp(document.getElementById('total-languages'), data.languages.length);
+                animateCountUp(document.getElementById('total-examples'), totalExamples);
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                // Fallback content if data fails to load
+                document.getElementById('languages-grid').innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 2rem;">
+                        <p style="color: var(--text-secondary);">Unable to load language data. Please try again later.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>
