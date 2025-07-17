@@ -55,7 +55,6 @@ jobs:
           body: "Automatically generated updates to site data based on code changes"
           branch: "update/site-data"
           delete-branch: true
-          labels: "automated"
           
       - name: Direct commit for small changes
         if: steps.create-pr.outputs.pr-number == ''
