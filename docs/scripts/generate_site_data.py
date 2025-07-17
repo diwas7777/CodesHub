@@ -80,32 +80,39 @@ def scan_code_examples(base_dir):
         if os.path.isdir(item_path) and \
            not item_name.startswith('.') and \
            item_name not in excluded_dirs:
-            
-            lang_dir = item_name # item_name is now the language directory
-            lang_path = item_path # path to the language directory
+            lang_dir = item_name
+            lang_path = item_path
 
             lang_files = []
-        supported_extensions = ('.py', '.js', '.java', '.c', '.cpp', '.cs', 
-                              '.go', '.rs', '.php', '.html', '.ts', '.sh')
-        
-        for root, _, files in os.walk(lang_path):
-            for filename in sorted(files):
-                if filename.endswith(supported_extensions):
-                    try:
-                        file_info = get_file_info(root, filename)
-                        lang_files.append(file_info)
-                    except Exception as e:
-                        print(f"Error processing {filename}: {e}")
-                        continue
-        
-        if lang_files:
-            languages.append({
-                "name": lang_dir.capitalize(),
-                "icon": get_language_icon(lang_dir),
-                "files": lang_files,
-                "total_size": sum(f["size"] for f in lang_files),
-                "total_lines": sum(f["lines"] for f in lang_files)
-            })
+            supported_extensions = ('.py', '.js', '.java', '.c', '.cpp', '.cs', 
+                                  '.go', '.rs', '.php', '.html', '.ts', '.sh')
+
+            for root, _, files in os.walk(lang_path):
+                for filename in sorted(files):
+                    if filename.endswith(supported_extensions):
+                        try:
+                            file_info = get_file_info(root, filename)
+                            lang_files.append(file_info)
+                        except Exception as e:
+                            print(f"Error processing {filename}: {e}")
+                            continue
+
+            # NEW: List all top-level files and folders (not just code files)
+            items = []
+            for entry in sorted(os.listdir(lang_path)):
+                if entry.startswith('.'):
+                    continue
+                items.append(entry)
+
+            if lang_files or items:
+                languages.append({
+                    "name": lang_dir.capitalize(),
+                    "icon": get_language_icon(lang_dir),
+                    "files": lang_files,  # detailed info for future use
+                    "items": items,       # simple list for frontend
+                    "total_size": sum(f["size"] for f in lang_files),
+                    "total_lines": sum(f["lines"] for f in lang_files)
+                })
     
     return languages
 
@@ -131,14 +138,16 @@ def generate_site_data():
     """Generate the complete site data structure"""
     base_dir = "../../"  # Point to the repository root
 
+    languages = scan_code_examples(base_dir)
+    # Use 'commits' instead of 'recent_activity' for frontend compatibility
     return {
         "last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        "languages": scan_code_examples(base_dir),
-        "recent_activity": get_git_history(),
+        "languages": languages,
+        "commits": get_git_history(),
         "stats": {
-            "total_languages": 0,  # Will be updated after
-            "total_files": 0,      # Will be updated after
-            "total_lines": 0       # Will be updated after
+            "total_languages": len(languages),
+            "total_files": sum(len(lang["files"]) for lang in languages),
+            "total_lines": sum(lang["total_lines"] for lang in languages)
         }
     }
 
