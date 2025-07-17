@@ -136,7 +136,7 @@ def get_language_icon(lang_name):
 
 def generate_site_data():
     """Generate the complete site data structure"""
-    base_dir = "../../"  # Point to the repository root
+    base_dir = "."  # Point to the repository root
 
     languages = scan_code_examples(base_dir)
     # Use 'commits' instead of 'recent_activity' for frontend compatibility
