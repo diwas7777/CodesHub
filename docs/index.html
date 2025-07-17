@@ -739,7 +739,7 @@
                 <h2 class="section-title">Programming Languages</h2>
                 <p class="section-subtitle">Explore our diverse collection of programming languages and their code examples. Click on any language to see detailed contents.</p>
             </div>
-            <div class="languages-grid" id="languages-grid">
+            <div class="languages-grid" id="language-cards-container">
                 <!-- Language cards will be populated here -->
             </div>
         </section>
@@ -901,7 +901,7 @@
                                 document.getElementById('total-examples').textContent = totalExamples;
 
                 // Populate language cards
-                const languagesGrid = document.getElementById('languages-grid');
+                const languagesGrid = document.getElementById('language-cards-container');
                 data.languages.forEach(language => {
                     const card = document.createElement('div');
                     card.className = 'language-card fade-in';
@@ -983,7 +983,7 @@
             } catch (error) {
                 console.error('Error loading data:', error);
                 // Fallback content if data fails to load
-                document.getElementById('languages-grid').innerHTML = `
+                document.getElementById('language-cards-container').innerHTML = `
                     <div style="grid-column: 1/-1; text-align: center; padding: 2rem;">
                         <p style="color: var(--text-secondary);">Unable to load language data. Please try again later.</p>
                     </div>
