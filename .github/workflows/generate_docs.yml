@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'C/**'
-      - 'C#/**'
+      - 'Csharp/**'
       - 'Cpp/**'
       - 'Go/**'
       - 'Html/**'
