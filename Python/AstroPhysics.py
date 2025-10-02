@@ -10,12 +10,22 @@ def analyze_light_curve(target='Kepler-10', mission='Kepler'):
     try:
         lc = search_lightcurve(target, mission=mission).download().normalize()
     except Exception as e:
-        print(f"Error retrieving lightcurve data for target '{target}' and mission '{mission}': {e}")
-        return
+def analyze_light_curve(target='Kepler-10', mission='Kepler', height_threshold=0.001):
+    """
+    Analyze the light curve for transit events.
+    
+    Parameters:
+        target (str): Target star name.
+        mission (str): Mission name.
+        height_threshold (float): Minimum dip depth for transit detection (normalized flux units).
+            Lower values increase sensitivity to shallow transits but may increase false positives.
+            Default is 0.001, suitable for typical exoplanet transits.
+    """
+    lc = search_lightcurve(target, mission=mission).download().normalize()
     time, flux = lc.time.value, lc.flux.value
     
-    # Find dips in brightness
-    peaks, _ = find_peaks(-flux, height=0.001)
+    # Find dips in brightness (transits) using the specified height threshold
+    peaks, _ = find_peaks(-flux, height=height_threshold)
     
     # Plot
     plt.figure(figsize=(10,4))
