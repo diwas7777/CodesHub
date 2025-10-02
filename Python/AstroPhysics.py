@@ -24,6 +24,13 @@ def analyze_light_curve(target='Kepler-10', mission='Kepler'):
 
 # 2. RADIAL VELOCITY METHOD
 def analyze_radial_velocity(time, velocity):
+    # Input validation
+    time = np.asarray(time)
+    velocity = np.asarray(velocity)
+    if time.ndim != 1 or velocity.ndim != 1:
+        raise ValueError("Both 'time' and 'velocity' must be 1-dimensional sequences.")
+    if time.shape[0] != velocity.shape[0]:
+        raise ValueError("'time' and 'velocity' must have the same length.")
     frequency, power = LombScargle(time, velocity).autopower()
     
     plt.figure(figsize=(10,4))
