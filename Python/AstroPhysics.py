@@ -34,13 +34,13 @@ def analyze_radial_velocity(time, velocity):
     plt.show()
 
 # 3. ORBITAL PERTURBATIONS (Hidden Planet Detection)
-def simulate_orbital_perturbations():
+def simulate_orbital_perturbations(simulation_time=1e3):
     sim = rebound.Simulation()
     sim.add(m=1.0)  # Star (mass in solar masses)
     sim.add(m=1e-3, a=1.0)  # Known planet
     sim.add(m=5e-4, a=1.7)  # Potential hidden planet
     
-    sim.integrate(1e3)  # Simulate for 1000 years
+    sim.integrate(simulation_time)  # Simulate for simulation_time years
     
     particles = sim.particles
     for i, p in enumerate(particles):
