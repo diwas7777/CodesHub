@@ -7,7 +7,11 @@ import rebound
 
 # 1. TRANSIT METHOD (Light Curve Analysis)
 def analyze_light_curve(target='Kepler-10', mission='Kepler'):
-    lc = search_lightcurve(target, mission=mission).download().normalize()
+    try:
+        lc = search_lightcurve(target, mission=mission).download().normalize()
+    except Exception as e:
+        print(f"Error retrieving lightcurve data for target '{target}' and mission '{mission}': {e}")
+        return
     time, flux = lc.time.value, lc.flux.value
     
     # Find dips in brightness
