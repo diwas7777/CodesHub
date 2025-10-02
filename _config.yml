@@ -5,3 +5,17 @@ plugins:
   - jekyll-relative-links
 description: CodesHub is made to help students find codes in different languages easily for every usecase.
 author: Diwas Shrestha
+
+languages:
+  - C
+  - Cpp
+  - Csharp
+  - Go
+  - Html
+  - Java
+  - Javascript
+  - PHP
+  - Python
+  - Rust
+  - Typescript
+
