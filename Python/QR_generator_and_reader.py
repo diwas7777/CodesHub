@@ -13,7 +13,11 @@ def QRread():
     import cv2
     d = cv2.QRCodeDetector()
     path = input("Enter path to QR Code: ")
-    val, _, _ = d.detectAndDecode(cv2.imread(path))
+    img = cv2.imread(path)
+    if img is None:
+        print("Error: File not found or invalid image format.")
+        return None
+    val, _, _ = d.detectAndDecode(img)
     return val
 
 if __name__ == '__main__':
