@@ -1,5 +1,6 @@
+import qrcode
+
 def QRcreate():
-    import qrcode
     path = input("Enter link to create QR Code : ")
     img = qrcode.make(path)
     imgName = input("Enter save file name : ")
