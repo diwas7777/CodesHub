@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-06 03:44:59",
+  "last_updated": "2025-10-06 08:20:40",
   "languages": [
     {
       "name": "C",
@@ -881,6 +881,54 @@
           "last_modified": "2025-10-06"
         },
         {
+          "name": "abstraction.java",
+          "size": 442,
+          "lines": 17,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "classAndObject.java",
+          "size": 561,
+          "lines": 23,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "constructor.java",
+          "size": 637,
+          "lines": 23,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "encapsulation.java",
+          "size": 789,
+          "lines": 26,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "inheritance.java",
+          "size": 512,
+          "lines": 20,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "interface.java",
+          "size": 526,
+          "lines": 22,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "polymorphism1.java",
+          "size": 468,
+          "lines": 19,
+          "last_modified": "2025-10-06"
+        },
+        {
+          "name": "polymorphism2.java",
+          "size": 445,
+          "lines": 20,
+          "last_modified": "2025-10-06"
+        },
+        {
           "name": "GuessNumber.java",
           "size": 934,
           "lines": 44,
@@ -913,6 +961,7 @@
         "IncomeTax.java",
         "KnightTourProblem.java",
         "LeapYear.java",
+        "ObjectOrientedProgramming",
         "PalindromeTest.java",
         "PascalsTriangle.java",
         "Pythogorean_Triplets.java",
@@ -935,8 +984,8 @@
         "spy number in java",
         "switchCase"
       ],
-      "total_size": 27706,
-      "total_lines": 1195
+      "total_size": 32086,
+      "total_lines": 1365
     },
     {
       "name": "Javascript",
@@ -1897,6 +1946,21 @@
   "commits": [
     {
       "author": "Diwas Shrestha",
+      "message": "Merge pull request #351 from drishtiisharma/oops-in-java",
+      "date": "2025-10-06"
+    },
+    {
+      "author": "Drishti Sharma",
+      "message": "added oop concepts in java",
+      "date": "2025-10-06"
+    },
+    {
+      "author": "github-actions[bot]",
+      "message": "docs: Update site_data.json [skip ci]",
+      "date": "2025-10-06"
+    },
+    {
+      "author": "Diwas Shrestha",
       "message": "Merge pull request #349 from diwas7777/copilot/fix-df9561ad-04f9-45eb-a8fb-8340e36ba50f",
       "date": "2025-10-06"
     },
@@ -1904,26 +1968,11 @@
       "author": "copilot-swe-agent[bot]",
       "message": "Addressing PR comments",
       "date": "2025-10-06"
-    },
-    {
-      "author": "copilot-swe-agent[bot]",
-      "message": "fix: Add explicit skip ci condition to prevent duplicate workflow runs",
-      "date": "2025-10-06"
-    },
-    {
-      "author": "copilot-swe-agent[bot]",
-      "message": "fix: Improve workflow and script for site_data.json generation",
-      "date": "2025-10-06"
-    },
-    {
-      "author": "copilot-swe-agent[bot]",
-      "message": "Fix: Update index.html to use correct data field and rename index.md",
-      "date": "2025-10-06"
     }
   ],
   "stats": {
     "total_languages": 11,
-    "total_files": 256,
-    "total_lines": 13338
+    "total_files": 264,
+    "total_lines": 13508
   }
 }
