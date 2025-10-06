@@ -21,7 +21,8 @@ if __name__ == '__main__':
     method = input("Enter your method - Create(C) or Read(R) : ")
     if method.upper() == "R":
         value = QRread()
-        print(value)
+        if value is not None:
+            print(value)
 
     elif method.upper() == "C":
         QRcreate()
