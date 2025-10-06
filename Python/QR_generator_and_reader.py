@@ -2,15 +2,16 @@ import qrcode
 
 def QRcreate():
     path = input("Enter link to create QR Code : ")
+import qrcode
+import cv2
+
+def QRcreate():
+    path = input("Enter link to create QR Code : ")
     img = qrcode.make(path)
     imgName = input("Enter save file name : ")
-    try:
-        img.save(imgName+'.jpg')
-        print(f"QR Code saved as {imgName+'.jpg'}")
-    except Exception as e:
-        print(f"Failed to save QR Code: {e}")
+    img.save(imgName+'.jpg')
+
 def QRread():
-    import cv2
     d = cv2.QRCodeDetector()
     path = input("Enter path to QR Code: ")
     img = cv2.imread(path)
