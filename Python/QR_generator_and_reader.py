@@ -1,8 +1,4 @@
 import qrcode
-
-def QRcreate():
-    path = input("Enter link to create QR Code : ")
-import qrcode
 import cv2
 
 def QRcreate():
