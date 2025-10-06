@@ -2,7 +2,7 @@
 import os
 import json
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
 
 def get_git_history():
@@ -179,5 +179,4 @@ def main():
         raise
 
 if __name__ == "__main__":
-    from datetime import timedelta 
     main()
