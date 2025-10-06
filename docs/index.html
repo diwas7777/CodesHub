@@ -919,7 +919,7 @@
 
                 // Populate recent activity
                 const activityList = document.getElementById('activity-list');
-                data.recent_activity.forEach(activity => {
+                data.commits.forEach(activity => {
                     const item = document.createElement('div');
                     item.className = 'activity-item fade-in';
                     item.innerHTML = `

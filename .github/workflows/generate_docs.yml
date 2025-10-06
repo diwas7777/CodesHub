@@ -17,15 +17,18 @@ on:
       - 'Rust/**'
       - 'typescript/**'
       - 'docs/scripts/generate_site_data.py'
+      - 'docs/index.html'
+  workflow_dispatch:  # Allow manual triggering
   schedule:
     - cron: '0 0 * * *'  
 
 jobs:
   generate_data:
     runs-on: ubuntu-latest
+    # Skip if commit message contains [skip ci] or [ci skip]
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, '[ci skip]')"
     permissions:
       contents: write
-      pull-requests: write
     
     steps:
       - name: Checkout repository
@@ -44,20 +47,7 @@ jobs:
       - name: Generate site data
         run: python docs/scripts/generate_site_data.py
         
-      - name: Create Pull Request if data changed
-        id: create-pr
-        if: github.ref == 'refs/heads/main'
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Automated update: Regenerated site data"
-          title: "Update generated site data"
-          body: "Automatically generated updates to site data based on code changes"
-          branch: "update/site-data"
-          delete-branch: true
-          
-      - name: Direct commit for small changes
-        if: steps.create-pr.outputs.pr-number == ''
+      - name: Commit and push if changed
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -65,6 +55,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Automated update: Regenerated site data [skip ci]"
+            git commit -m "docs: Update site_data.json [skip ci]"
             git push
           fi
