@@ -21,11 +21,11 @@ load_stage2:
     xor bx, bx
 
     mov ah, 0x02
-    mov al, 10
-    mov ch, 0
-    mov cl, 2
-    mov dh, 0
-    mov dl, 0x80
+    mov al, 10       ; Number of sectors to read
+    mov ch, 0        ; Cylinder = 0
+    mov cl, 2        ; Read from Sector 2
+    mov dh, 0        ; Head = 0
+    mov dl, 0x80     ; Boot drive
 
     int 0x13
     jc load_fail
