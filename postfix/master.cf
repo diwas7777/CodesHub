@@ -1,0 +1,7 @@
+#This pipe connects your source mail box connected at other end to a bash-script
+script-pipe  unix  -       n       n       -       -       pipe
+  flags=Rq user=www-data argv=<your-path-to-bash-script> ${sender} ${recipient} #www-data is default user used by postfix. enter path to bash script
+
+# This is another pipe that executes script as user -> admin
+script-pipe-second  unix  -       n       n       -       -       pipe
+  flags=Rq user=admin argv=<your-path-to-bash-script> ${sender} ${recipient} #you can make changes to your user as required
