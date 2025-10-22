@@ -1,0 +1,8 @@
+1. add transport map entry in /etc/postfix/transport:
+2. Then run -> sudo postmap /etc/postfix/transport
+3. update /etc/postfix/main.cf
+4. Then run -> sudo systemctl restart postfix
+5. add pipe in /etc/postfix/master.cf
+6. place your bash script and use it in the pipe (Step 5)
+7. create a sieve filter if you want to filter the receied mail + you can forward it to separate mailbox (recommended)
+8. Then run (compile sieve) -> sievec <path-to-sieve>
