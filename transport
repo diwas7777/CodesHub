@@ -1,0 +1,5 @@
+# This is the pipe for your source mail-box
+<mail-address-of-source-mailbox>    script-pipe: #enter source email-address
+
+# You can add another pipe to another email as required
+<mail-address-of-source-mailbox2>  script-pipe-second: #add or remove such lines to add pipes as required
