@@ -1,0 +1,1 @@
+transport_maps = hash:/etc/postfix/transport #this enables cutom routing of email as specified in transport
