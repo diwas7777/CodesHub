@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-08 01:26:43",
+  "last_updated": "2025-11-09 01:43:08",
   "languages": [
     {
       "name": "C",
@@ -9,145 +9,145 @@
           "name": "AllSortingTechniques.c",
           "size": 8380,
           "lines": 387,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "CheckSum_ErrorDetection.c",
           "size": 2166,
           "lines": 100,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Contact-Managment-System.c",
           "size": 1503,
           "lines": 59,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Encryption-Decryption.c",
           "size": 2397,
           "lines": 90,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Full_Pyramid.c",
           "size": 400,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Merge_sortDoublyLinkedList.c",
           "size": 3050,
           "lines": 141,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "VRC.c",
           "size": 1501,
           "lines": 70,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "additon.c",
           "size": 262,
           "lines": 14,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "amstrong.c",
           "size": 598,
           "lines": 25,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "area of circle.c",
           "size": 275,
           "lines": 16,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "bubble-sort.c",
           "size": 694,
           "lines": 37,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "even and odd.c",
           "size": 456,
           "lines": 28,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "factorial.c",
           "size": 422,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "fastFoodCLI.c",
           "size": 4241,
           "lines": 106,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "fibonacci.c",
           "size": 372,
           "lines": 16,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "hamming.c",
           "size": 1451,
           "lines": 83,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "palindrome.c",
           "size": 554,
           "lines": 22,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "quick_sort.c",
           "size": 930,
           "lines": 38,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "reverse-linked-list.c",
           "size": 1095,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "starpattern.c",
           "size": 207,
           "lines": 14,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "IdenticalTrees.c",
           "size": 2551,
           "lines": 77,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "tree_inOrder.c",
           "size": 1072,
           "lines": 59,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "tree_postOrder.c",
           "size": 1085,
           "lines": 59,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "tree_preOrderTrav.c",
           "size": 1081,
           "lines": 59,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -189,373 +189,373 @@
           "name": "0-1_Knapsack.cpp",
           "size": 969,
           "lines": 45,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Add_binary_num.cpp",
           "size": 1859,
           "lines": 82,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "BookAllocation.cpp",
           "size": 1010,
           "lines": 77,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "CRC.cpp",
           "size": 3290,
           "lines": 118,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Caesar Cipher.cpp",
           "size": 1383,
           "lines": 80,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "ChineseRemainderTheorem.cpp",
           "size": 2049,
           "lines": 72,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Count_divisible_pairs_in_an_array.cpp",
           "size": 475,
           "lines": 28,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Counting_sort.cpp",
           "size": 1254,
           "lines": 49,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "DecToBinRecursive.cpp",
           "size": 209,
           "lines": 13,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "DeleteNodesLL.cpp",
           "size": 775,
           "lines": 68,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Design_HashMap.cpp",
           "size": 521,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Design_HashSet.cpp",
           "size": 501,
           "lines": 27,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Floyds_Warshell_Algo.cpp",
           "size": 1419,
           "lines": 73,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "FormBiggestNumber.cpp",
           "size": 882,
           "lines": 59,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "GenerateParenthesis.cpp",
           "size": 275,
           "lines": 27,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "HelloWorld.cpp",
           "size": 103,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "KDTheorem_subarrays.cpp",
           "size": 954,
           "lines": 46,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Last_Occurence.cpp",
           "size": 577,
           "lines": 36,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Leetcode-363 Max Sum of Rectangle No Larger Than K.cpp",
           "size": 1033,
           "lines": 36,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Longest_Common_Substring.cpp",
           "size": 495,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Matrix_Chain_Multiplication.cpp",
           "size": 489,
           "lines": 19,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Prime Factors of a number.cpp",
           "size": 681,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Queue_using_linked_list.cpp",
           "size": 740,
           "lines": 41,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "STACK_reverseSentence.cpp",
           "size": 646,
           "lines": 31,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "TemperatureConverter.cpp",
           "size": 2579,
           "lines": 93,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "TowerOfHanoi.cpp",
           "size": 438,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Travelling-salesman.cpp",
           "size": 1084,
           "lines": 47,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Validate_Binary_Search_Tree.cpp",
           "size": 799,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "andrew_algorithm_convex_hull.cpp",
           "size": 996,
           "lines": 52,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "avl_tree.cpp",
           "size": 6557,
           "lines": 284,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "binary_exponentiation.cpp",
           "size": 844,
           "lines": 49,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "binomial_heap.cpp",
           "size": 5259,
           "lines": 283,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "butterfly_pattern.cpp",
           "size": 710,
           "lines": 41,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "check_array.cpp",
           "size": 826,
           "lines": 42,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "chocolate_distribution.cpp",
           "size": 376,
           "lines": 19,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "count_nodes_in_circular_linkedlist.cpp",
           "size": 1331,
           "lines": 77,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "count_word.cpp",
           "size": 881,
           "lines": 44,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "dictOrder.cpp",
           "size": 1425,
           "lines": 90,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "double_hashing.cpp",
           "size": 3925,
           "lines": 175,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "expertsystem.cpp",
           "size": 1274,
           "lines": 51,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "expression_tree.cpp",
           "size": 1667,
           "lines": 96,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "fast_fourier_transform.cpp",
           "size": 1077,
           "lines": 40,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "firstandlastoccurence.cpp",
           "size": 1129,
           "lines": 50,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "generate-random-color.cpp",
           "size": 577,
           "lines": 39,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "graph_dial.cpp",
           "size": 3283,
           "lines": 143,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "level_order.cpp",
           "size": 1783,
           "lines": 91,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "nth_node.cpp",
           "size": 1401,
           "lines": 84,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "painterspartitionproblem.cpp",
           "size": 640,
           "lines": 38,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "palindrome_recursion.cpp",
           "size": 674,
           "lines": 51,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "pangram_check.cpp",
           "size": 1245,
           "lines": 49,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "reverse_array.cpp",
           "size": 577,
           "lines": 28,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "right_view_of_a_binary tree.cpp",
           "size": 799,
           "lines": 40,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "rotate_array.cpp",
           "size": 962,
           "lines": 55,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "snake_game.cpp",
           "size": 4701,
           "lines": 195,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "startPyramid.cpp",
           "size": 293,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "stepping_number.cpp",
           "size": 1200,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sudoku_solver.cpp",
           "size": 2957,
           "lines": 138,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sum_of_nodes_in_top_view_of_a_binary_tree.cpp",
           "size": 1330,
           "lines": 79,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "swap_nodes.cpp",
           "size": 2168,
           "lines": 106,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "top_view_of_a_binary_tree.cpp",
           "size": 1526,
           "lines": 89,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "trapRainWater.cpp",
           "size": 1632,
           "lines": 76,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sjf.cpp",
           "size": 3815,
           "lines": 126,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -634,19 +634,19 @@
           "name": "HelloWorld.cs",
           "size": 172,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "hash.cs",
           "size": 476,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "triangle.cs",
           "size": 621,
           "lines": 28,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -665,13 +665,13 @@
           "name": "bubbleSort.go",
           "size": 348,
           "lines": 19,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "linearsearch.go",
           "size": 277,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -689,43 +689,43 @@
           "name": "HelloWorld.html",
           "size": 22,
           "lines": 1,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "autoChangeColor.html",
           "size": 729,
           "lines": 32,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "onClick.html",
           "size": 1299,
           "lines": 52,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "ProfitLoss.html",
           "size": 958,
           "lines": 27,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "functionMathsAll.html",
           "size": 1257,
           "lines": 45,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "nNaturalNumber.html",
           "size": 412,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 4075,
           "lines": 120,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -746,211 +746,211 @@
           "name": "AreaCalculator.java",
           "size": 2471,
           "lines": 64,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Calculator.java",
           "size": 894,
           "lines": 32,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "HelloWorld.java",
           "size": 118,
           "lines": 5,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "IncomeTax.java",
           "size": 858,
           "lines": 34,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "KnightTourProblem.java",
           "size": 2490,
           "lines": 98,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "LeapYear.java",
           "size": 712,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "PalindromeTest.java",
           "size": 840,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "PascalsTriangle.java",
           "size": 855,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Pythogorean_Triplets.java",
           "size": 707,
           "lines": 31,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "QuickSort_on_Singly_Linked_List.java",
           "size": 2621,
           "lines": 130,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "ReverseStringWordWise.java",
           "size": 658,
           "lines": 25,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "add_two_numbers.java",
           "size": 318,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "fibonacci.java",
           "size": 282,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "findSingleInArrayOfDoubles.java",
           "size": 250,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "intersection_point_of_two_Linked_Lists.java",
           "size": 1417,
           "lines": 80,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "median_of_two_sorted_array.java",
           "size": 935,
           "lines": 52,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "merge_sort.java",
           "size": 1277,
           "lines": 79,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "palindrome.java",
           "size": 768,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "printLarge.java",
           "size": 523,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "reverse_doubly_linkedlist.java",
           "size": 1929,
           "lines": 99,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "MagicalBinaryString.java",
           "size": 1586,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "PairMakesSum.java",
           "size": 1741,
           "lines": 72,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Fruites.java",
           "size": 306,
           "lines": 19,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "abstraction.java",
           "size": 442,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "classAndObject.java",
           "size": 561,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "constructor.java",
           "size": 637,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "encapsulation.java",
           "size": 789,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "inheritance.java",
           "size": 512,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "interface.java",
           "size": 526,
           "lines": 22,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "polymorphism1.java",
           "size": 468,
           "lines": 19,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "polymorphism2.java",
           "size": 445,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "GuessNumber.java",
           "size": 934,
           "lines": 44,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Si.java",
           "size": 558,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Main.java",
           "size": 634,
           "lines": 35,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Main.java",
           "size": 1024,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -995,175 +995,175 @@
           "name": "HelloWorld.js",
           "size": 28,
           "lines": 1,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Hollow Square Pattern.js",
           "size": 457,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "WeaponScavengingGame.js",
           "size": 2111,
           "lines": 99,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "addTwoNumber.js",
           "size": 106,
           "lines": 5,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "arrayChecker.js",
           "size": 779,
           "lines": 50,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "arrowfunction.js",
           "size": 109,
           "lines": 4,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "bst_to_minheap.js",
           "size": 2246,
           "lines": 101,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "function.js",
           "size": 348,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "merge_two_bst.js",
           "size": 3521,
           "lines": 168,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "palindrome.js",
           "size": 258,
           "lines": 10,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "pyramidstartpattern.js",
           "size": 280,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.js",
           "size": 947,
           "lines": 44,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.test.js",
           "size": 351,
           "lines": 12,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 541,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 533,
           "lines": 18,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.js",
           "size": 4144,
           "lines": 149,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "script.js",
           "size": 3426,
           "lines": 133,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 548,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "ant.js",
           "size": 1865,
           "lines": 62,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.js",
           "size": 1230,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "point.js",
           "size": 754,
           "lines": 35,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "app.js",
           "size": 504,
           "lines": 20,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 566,
           "lines": 25,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 840,
           "lines": 29,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.js",
           "size": 124,
           "lines": 6,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "index.html",
           "size": 1685,
           "lines": 58,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "scripts.js",
           "size": 2468,
           "lines": 103,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "storage.html",
           "size": 1557,
           "lines": 45,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "storage.js",
           "size": 1333,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1196,25 +1196,25 @@
           "name": "forLoop.php",
           "size": 74,
           "lines": 6,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "helloworld.php",
           "size": 31,
           "lines": 3,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "koneksi.php",
           "size": 179,
           "lines": 5,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "triangle.php",
           "size": 99,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1234,553 +1234,553 @@
           "name": "1's complement.py",
           "size": 2200,
           "lines": 72,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "AstroPhysics.py",
           "size": 2834,
           "lines": 73,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "CoffeeMachine.py",
           "size": 2554,
           "lines": 93,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "CombinationSumII.py",
           "size": 1011,
           "lines": 31,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Compress_The_String.py",
           "size": 867,
           "lines": 29,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Count_Sort.py",
           "size": 1601,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Digital_clock.py",
           "size": 625,
           "lines": 24,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Duplicates.py",
           "size": 497,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Egg_Catcher_Game.py",
           "size": 3214,
           "lines": 104,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Fibonacci_recursion.py",
           "size": 249,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "FidgetSpinner.py",
           "size": 617,
           "lines": 38,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "HangMan.py",
           "size": 4009,
           "lines": 140,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Insert_into_a_Binary_Search_Tree.py",
           "size": 1461,
           "lines": 44,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Magic_Number.py",
           "size": 771,
           "lines": 22,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Monte_hall.py",
           "size": 972,
           "lines": 37,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Number_Palindrome.py",
           "size": 259,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Pyramidpattern.py",
           "size": 297,
           "lines": 24,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "QR_generator_and_reader.py",
           "size": 813,
           "lines": 32,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Queue_LinkedList.py",
           "size": 2371,
           "lines": 96,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "RockPaperScissor.py",
           "size": 516,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Rock_Paper_Scissors.py",
           "size": 789,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "SnakeGame.py",
           "size": 1678,
           "lines": 90,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Stack_LiskedList.py",
           "size": 1915,
           "lines": 84,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "String_Palindrome.py",
           "size": 255,
           "lines": 7,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "TCPclient.py",
           "size": 267,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "TCPserver.py",
           "size": 476,
           "lines": 23,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Telephonedirectory.py",
           "size": 1619,
           "lines": 65,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Tower_of_Hanoi.py",
           "size": 446,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Triangle Patter.py",
           "size": 1033,
           "lines": 57,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Valid Anagram.py",
           "size": 314,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "YT_video_audio_downloader.py",
           "size": 2605,
           "lines": 74,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "area.py",
           "size": 273,
           "lines": 8,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "areaOfRectangle.py",
           "size": 280,
           "lines": 10,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "areaoftriangle.py",
           "size": 979,
           "lines": 37,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "batman.py",
           "size": 2335,
           "lines": 71,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "battery_saver_notif.py",
           "size": 355,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "binary_search.py",
           "size": 630,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "binarytree_fold.py",
           "size": 1338,
           "lines": 83,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "binomial_expansion_series.py",
           "size": 1520,
           "lines": 65,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "bubblesort.py",
           "size": 878,
           "lines": 24,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "butterfly_pattern.py",
           "size": 530,
           "lines": 25,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "calendar.py",
           "size": 94,
           "lines": 3,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "check_prime.py",
           "size": 1101,
           "lines": 22,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "email_sender.py",
           "size": 3933,
           "lines": 103,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "fibonacciSequence.py",
           "size": 1228,
           "lines": 37,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "formatting.py",
           "size": 352,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "hashcracker.py",
           "size": 780,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "heap_sort.py",
           "size": 356,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "integer_to_roman.py",
           "size": 518,
           "lines": 27,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "internetspeedtest.py",
           "size": 991,
           "lines": 43,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "intersection_point_of_two_Linked_Lists.py",
           "size": 903,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "katakana2hiragana.py",
           "size": 575,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "left_view_of_binary_tree.py",
           "size": 585,
           "lines": 31,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "linear_search.py",
           "size": 363,
           "lines": 14,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "macspoofer.py",
           "size": 596,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "mad-libs-gen.py",
           "size": 918,
           "lines": 49,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "matrix.py",
           "size": 7357,
           "lines": 222,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "median_of_two_sorted_array.py",
           "size": 1107,
           "lines": 45,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "merge_sort.py",
           "size": 1477,
           "lines": 53,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "nmap.py",
           "size": 413,
           "lines": 16,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "number_guessing_game.py",
           "size": 1237,
           "lines": 40,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "packetflooder.py",
           "size": 303,
           "lines": 12,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "password_generator.py",
           "size": 7844,
           "lines": 191,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "ping pong game.py",
           "size": 3131,
           "lines": 132,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "python-nmap-port-scanner.py",
           "size": 1202,
           "lines": 46,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "quizGame.py",
           "size": 3865,
           "lines": 121,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "recon.py",
           "size": 557,
           "lines": 21,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "recursive_factorial.py",
           "size": 340,
           "lines": 15,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "rev_string.py",
           "size": 234,
           "lines": 9,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "roadCrossing Game.py",
           "size": 2240,
           "lines": 106,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "screenshot.py",
           "size": 250,
           "lines": 13,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "secure_password_generator.py",
           "size": 636,
           "lines": 28,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sendEmail.py",
           "size": 739,
           "lines": 27,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "snake game.py",
           "size": 3353,
           "lines": 120,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "spirograph.py",
           "size": 516,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "subdomain.py",
           "size": 298,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sudoku_ManiL-Keo.py",
           "size": 3182,
           "lines": 98,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "suduko_solver.py",
           "size": 1328,
           "lines": 61,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sum_of_first_n2_natural_numbers.py",
           "size": 580,
           "lines": 22,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "sum_of_n_natural_numbers.py",
           "size": 1003,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "system_health_check.py",
           "size": 1196,
           "lines": 42,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "temperature_converter.py",
           "size": 1237,
           "lines": 43,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "test.py",
           "size": 20,
           "lines": 1,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "tictactoe.py",
           "size": 1778,
           "lines": 71,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "top_view.py",
           "size": 956,
           "lines": 45,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "validation_password_creation_solution.py",
           "size": 2147,
           "lines": 42,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "wifi scanner.py",
           "size": 359,
           "lines": 13,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "maximize.py",
           "size": 572,
           "lines": 17,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "functions.py",
           "size": 10537,
           "lines": 183,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "main.py",
           "size": 1520,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "Main.py",
           "size": 966,
           "lines": 30,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "reg.py",
           "size": 1018,
           "lines": 43,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1888,31 +1888,31 @@
           "name": "binary_search.rs",
           "size": 984,
           "lines": 38,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "brainfuck_interpreter.rs",
           "size": 2852,
           "lines": 96,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "hello_world.rs",
           "size": 45,
           "lines": 3,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "selection_sort.rs",
           "size": 548,
           "lines": 26,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         },
         {
           "name": "main.rs",
           "size": 2668,
           "lines": 108,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1933,7 +1933,7 @@
           "name": "mail_to_api.sh",
           "size": 828,
           "lines": 33,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1981,7 +1981,7 @@
           "name": "palindrome.ts",
           "size": 240,
           "lines": 11,
-          "last_modified": "2025-11-08"
+          "last_modified": "2025-11-09"
         }
       ],
       "items": [
@@ -1992,6 +1992,11 @@
     }
   ],
   "commits": [
+    {
+      "author": "github-actions[bot]",
+      "message": "docs: Update site_data.json [skip ci]",
+      "date": "2025-11-08"
+    },
     {
       "author": "github-actions[bot]",
       "message": "docs: Update site_data.json [skip ci]",
@@ -2011,11 +2016,6 @@
       "author": "github-actions[bot]",
       "message": "docs: Update site_data.json [skip ci]",
       "date": "2025-11-04"
-    },
-    {
-      "author": "github-actions[bot]",
-      "message": "docs: Update site_data.json [skip ci]",
-      "date": "2025-11-03"
     }
   ],
   "stats": {
