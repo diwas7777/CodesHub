@@ -44,18 +44,39 @@ By participating in this project, you agree to be respectful, inclusive, and con
 
 ```
 .
-├── C/
-├── C++/
-├── Python/
-├── Java/
-├── JavaScript/
-├── Go/
-├── HTML/
-├── docs/
+├── C/                   # C programs
+├── Cpp/                 # C++ programs
+├── Csharp/              # C# programs
+├── Go/                  # Go programs
+├── Html/                # HTML/CSS projects
+├── Java/                # Java programs
+├── Javascript/          # JavaScript programs
+├── Kotlin/              # Kotlin programs
+├── PHP/                 # PHP programs
+├── Python/              # Python programs
+├── Ruby/                # Ruby programs
+├── Rust/                # Rust programs
+├── Swift/               # Swift programs
+├── TypeScript/          # TypeScript programs
+├── bash/                # Shell/Bash scripts
+├── c/                   # C programs (alternate)
+├── guide/               # Configuration guides
+├── docs/                # Jekyll documentation site
+├── postfix/             # Postfix config examples
+├── sieve/               # Sieve email filtering
+├── transport/           # Postfix transport maps
+├── .github/             # GitHub Actions workflows
+├── _config.yml          # Jekyll site config
 ├── LICENSE
 ├── README.md
 └── CONTRIBUTING.md
 ```
+
+## Adding a New Language Directory
+
+1. Create a new folder using the naming convention above (check existing folder names first to avoid duplicates).
+2. Add your code files with clear, descriptive names.
+3. Update the directory structure in this file if you add a new top-level folder.
 
 ---
 
