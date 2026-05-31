@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const languagesContainer = document.getElementById('language-cards-container');
     const commitList = document.getElementById('commit-list'); // For recent changes
 
+    // Map language display names to GitHub folder paths
+    const languageToFolder = {
+        'C': 'C',
+        'C++': 'Cpp',
+        'C#': 'Csharp',
+        'Go': 'Go',
+        'HTML': 'Html',
+        'Java': 'Java',
+        'JavaScript': 'Javascript',
+        'Kotlin': 'Kotlin',
+        'PHP': 'PHP',
+        'Python': 'Python',
+        'Ruby': 'Ruby',
+        'Rust': 'Rust',
+        'Swift': 'Swift',
+        'TypeScript': 'TypeScript',
+        'Bash': 'bash',
+        'Shell': 'bash',
+    };
+
     // Elements for the language details section
     const detailsSection = document.getElementById('language-details');
     const detailsTitle = document.getElementById('language-detail-title');
@@ -39,6 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     const numFiles = (lang.files || []).length;
                     fileCountElement.textContent = `${numFiles} item${numFiles !== 1 ? 's' : ''}`; // e.g., "0 items", "1 item", "5 items"
                     card.appendChild(fileCountElement);
+
+                    // Add GitHub source link if a folder mapping exists
+                    const folder = languageToFolder[lang.name];
+                    if (folder) {
+                        const sourceLink = document.createElement('a');
+                        sourceLink.href = `https://github.com/diwas7777/CodesHub/tree/main/${folder}`;
+                        sourceLink.target = '_blank';
+                        sourceLink.rel = 'noopener noreferrer';
+                        sourceLink.className = 'github-link';
+                        sourceLink.textContent = 'View source';
+                        sourceLink.style.cssText = 'font-size: 0.75em; color: #007bff; margin-top: 4px; display: block;';
+                        card.appendChild(sourceLink);
+                    }
                     
                     // Add click listener to the card
                     card.addEventListener('click', () => {
