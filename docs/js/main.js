@@ -7,6 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('language-detail-title');
     const detailsFileList = document.getElementById('language-file-list');
     const closeDetailsButton = document.getElementById('close-details-button');
+    // Favorites UI elements
+    const viewFavBtn = document.getElementById('view-favorites-btn');
+    const FAVORITES_KEY = 'codeshub:favorites';
+
+    function loadFavorites() {
+        try {
+            const raw = localStorage.getItem(FAVORITES_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch {
+            return [];
+        }
+    }
+
+    function saveFavorites(arr) {
+        try {
+            localStorage.setItem(FAVORITES_KEY, JSON.stringify(arr));
+        } catch {
+            // ignore storage errors
+        }
+    }
+
+    function isFavorite(id, favs) {
+        return favs.includes(id);
+    }
+
+    let favorites = loadFavorites();
+    let showFavoritesOnly = false;
+
+    function applyFavoritesFilter() {
+        if (!languagesContainer) return;
+        const cards = languagesContainer.querySelectorAll('.language-card');
+        cards.forEach(card => {
+            const id = card.dataset.langId || card.dataset.languageName || '';
+            const match = !showFavoritesOnly || isFavorite(id, favorites);
+            card.style.display = match ? '' : 'none';
+        });
+    }
+
 
     fetch('site_data.json') // Assumes site_data.json is in the same directory as index.html (docs/)
         .then(response => {
@@ -39,6 +77,44 @@ document.addEventListener('DOMContentLoaded', () => {
                     const numFiles = (lang.files || []).length;
                     fileCountElement.textContent = `${numFiles} item${numFiles !== 1 ? 's' : ''}`; // e.g., "0 items", "1 item", "5 items"
                     card.appendChild(fileCountElement);
+                    // Heart favorite toggle
+                    const heartBtn = document.createElement('button');
+                    heartBtn.className = 'heart-btn';
+                    heartBtn.type = 'button';
+                    // Create a stable ID: prefer lang.id else name slug
+                    const langId = (lang.id || lang.name || '').toLowerCase().replace(/\s+/g, '-');
+                    card.dataset.langId = langId;
+                    heartBtn.setAttribute('aria-label', `Favorite ${lang.name}`);
+                    heartBtn.setAttribute('aria-pressed', 'false');
+                    heartBtn.innerHTML = '❤️';
+                    // initial paint
+                    (function initHeart(){
+                        if (isFavorite(langId, favorites)) {
+                            heartBtn.classList.add('is-fav');
+                            heartBtn.setAttribute('aria-pressed','true');
+                        }
+                    })();
+                    heartBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (isFavorite(langId, favorites)) {
+                            favorites = favorites.filter(id => id !== langId);
+                        } else {
+                            favorites = [...favorites, langId];
+                        }
+                        saveFavorites(favorites);
+                        const active = isFavorite(langId, favorites);
+                        heartBtn.classList.toggle('is-fav', active);
+                        heartBtn.setAttribute('aria-pressed', active ? 'true' : 'false');
+                        if (showFavoritesOnly) applyFavoritesFilter();
+                    });
+                    heartBtn.addEventListener('keydown', (e) => {
+                        if (e.key === ' ' || e.key === 'Enter') {
+                            e.preventDefault();
+                            heartBtn.click();
+                        }
+                    });
+                    card.appendChild(heartBtn);
+
                     
                     // Add click listener to the card
                     card.addEventListener('click', () => {
@@ -71,6 +147,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     languagesContainer.appendChild(card);
                 });
+
+                // Initialize favorites filter button
+                if (viewFavBtn) {
+                    viewFavBtn.addEventListener('click', () => {
+                        showFavoritesOnly = !showFavoritesOnly;
+                        viewFavBtn.setAttribute('aria-pressed', showFavoritesOnly ? 'true' : 'false');
+                        applyFavoritesFilter();
+                    });
+                }
+                // Apply any stored favorites on first render
+                applyFavoritesFilter();
+
             } else {
                 console.warn('No languages data found in site_data.json or language-cards-container is missing.');
                 if (languagesContainer) {
