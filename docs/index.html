@@ -421,11 +421,16 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.875rem;
             color: var(--text-primary);
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
         .file-item:hover {
-            background: var(--border-color);
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(4px);
         }
 
         /* Features Section */
@@ -888,6 +893,84 @@
             'Html': 'HTML',
             'typescript': 'TS'
         };
+        // File path mapping for nested files
+        const filePathMapping = {
+            'C': {
+                'IdenticalTrees.c': 'Tree traverals/IdenticalTrees.c',
+                'tree_inOrder.c': 'Tree traverals/tree_inOrder.c',
+                'tree_postOrder.c': 'Tree traverals/tree_postOrder.c',
+                'tree_preOrderTrav.c': 'Tree traverals/tree_preOrderTrav.c'
+            },
+            'Cpp': {
+                'sjf.cpp': 'OS/sjf.cpp'
+            },
+            'Html': {
+                'functionMathsAll.html': 'Class 12th Solutions/functionMathsAll.html',
+                'nNaturalNumber.html': 'Class 12th Solutions/nNaturalNumber.html',
+                'ProfitLoss.html': 'Class 12th Solutions/ProfitLoss.html',
+                'index.html': 'fun project/index.html',
+                'style.css': 'fun project/style.css'
+            },
+            'Java': {
+                'Fruites.java': 'arrayList/Fruites.java',
+                'Main.java': 'exchangeValues/Main.java',
+                'GuessNumber.java': 'guessNumber/GuessNumber.java',
+                'abstraction.java': 'ObjectOrientedProgramming/abstraction.java',
+                'classAndObject.java': 'ObjectOrientedProgramming/classAndObject.java',
+                'constructor.java': 'ObjectOrientedProgramming/constructor.java',
+                'encapsulation.java': 'ObjectOrientedProgramming/encapsulation.java',
+                'inheritance.java': 'ObjectOrientedProgramming/inheritance.java',
+                'interface.java': 'ObjectOrientedProgramming/interface.java',
+                'polymorphism1.java': 'ObjectOrientedProgramming/polymorphism1.java',
+                'polymorphism2.java': 'ObjectOrientedProgramming/polymorphism2.java',
+                'MagicalBinaryString.java': 'RazorPay/MagicalBinaryString.java',
+                'PairMakesSum.java': 'RazorPay/PairMakesSum.java',
+                'Si.java': 'simpleInterest/Si.java'
+            },
+            'Javascript': {
+                'scripts.js': 'Calculator/scripts.js',
+                'storage.html': 'Calculator/storage.html',
+                'storage.js': 'Calculator/storage.js',
+                'app.js': 'color-flipper/app.js',
+                'styles.css': 'color-flipper/styles.css',
+                'index.js': 'fastify/index.js',
+                'index.test.js': 'fastify/index.test.js',
+                'package.json': 'fastify/package.json',
+                'pnpm-lock.yaml': 'fastify/pnpm-lock.yaml'
+            },
+            'Python': {
+                'Main.py': 'exchangeValuesPython/Main.py',
+                'functions.py': 'LMS/functions.py',
+                'main.py': 'LMS/main.py',
+                'data.csv': 'regression_model/data.csv',
+                'reg.py': 'regression_model/reg.py'
+            },
+            'Rust': {
+                'main.rs': 'rock_paper_scissors/src/main.rs'
+            }
+        };
+
+
+        const duplicateFileHandling = {
+            'Java': {
+                'Main.java': ['exchangeValues/Main.java', 'switchCase/Main.java']
+            },
+            'Javascript': {
+                'index.html': ['Calculator/index.html', 'color-flipper/index.html']
+            },
+            'Html': {
+                'index.html': ['fun project/index.html']
+            }
+        };
+
+        async function checkFileExists(url) {
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                return response.ok;
+            } catch {
+                return false;
+            }
+        }
 
         // Fetch and display data
         document.addEventListener('DOMContentLoaded', async () => {
@@ -953,10 +1036,63 @@
                     modalTitle.textContent = `${language.name} Examples (${language.files.length})`;
                     fileGrid.innerHTML = '';
                     
+                    const folders = language.items ? language.items.filter(item => 
+                        !item.includes('.') && !['full pyramid', 'inverted full pyramid', 'inverted half pyramid', 'pascals triangle', 'traingle'].includes(item)
+                    ) : [];
+                    
+                    const fileNameCounts = {};
                     language.files.forEach(file => {
-                        const fileItem = document.createElement('div');
+                        fileNameCounts[file.name] = (fileNameCounts[file.name] || 0) + 1;
+                    });
+                    
+                    const duplicateCounters = {};
+                    
+                    language.files.forEach(file => {
+                        const fileItem = document.createElement('a');
                         fileItem.className = 'file-item';
-                        fileItem.textContent = file.name;
+                        
+                        // Check if this file has a custom path mapping
+                        const languagePaths = filePathMapping[language.name];
+                        let filePath = file.name;
+                        let displayName = file.name;
+                        
+                        if (languagePaths && languagePaths[file.name]) {
+                            filePath = languagePaths[file.name];
+                            
+                            if (fileNameCounts[file.name] > 1) {
+                                const folderPath = filePath.substring(0, filePath.lastIndexOf('/'));
+                                displayName = `${file.name} (${folderPath})`;
+                            }
+                        } else if (duplicateFileHandling[language.name] && duplicateFileHandling[language.name][file.name]) {
+                            // Handle known duplicates
+                            const duplicateOptions = duplicateFileHandling[language.name][file.name];
+                            const duplicateIndex = duplicateCounters[file.name] || 0;
+                            duplicateCounters[file.name] = duplicateIndex + 1;
+                            
+                            if (duplicateIndex < duplicateOptions.length) {
+                                filePath = duplicateOptions[duplicateIndex];
+                                const folderPath = filePath.substring(0, filePath.lastIndexOf('/'));
+                                displayName = `${file.name} (${folderPath})`;
+                            }
+                        } else {
+                            for (const folder of folders) {
+                                if (file.name.toLowerCase().includes('tree') && folder.toLowerCase().includes('tree')) {
+                                    filePath = `${folder}/${file.name}`;
+                                    break;
+                                } else if (file.name.toLowerCase().includes('os') && folder.toLowerCase().includes('os')) {
+                                    filePath = `${folder}/${file.name}`;
+                                    break;
+                                }
+                            }
+                        }
+                        
+                        fileItem.textContent = displayName;
+                        fileItem.href = `https://github.com/diwas777777/CodesHub/blob/main/${language.name}/${filePath}`;
+                        fileItem.target = '_blank';
+                        fileItem.rel = 'noopener noreferrer';
+                        
+                        fileItem.title = `View on GitHub`;
+                        
                         fileGrid.appendChild(fileItem);
                     });
                     
