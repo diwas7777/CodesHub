@@ -6,10 +6,6 @@ from astropy.timeseries import LombScargle
 import rebound
 
 # 1. TRANSIT METHOD (Light Curve Analysis)
-def analyze_light_curve(target='Kepler-10', mission='Kepler'):
-    try:
-        lc = search_lightcurve(target, mission=mission).download().normalize()
-    except Exception as e:
 def analyze_light_curve(target='Kepler-10', mission='Kepler', height_threshold=0.001):
     """
     Analyze the light curve for transit events.
@@ -21,7 +17,12 @@ def analyze_light_curve(target='Kepler-10', mission='Kepler', height_threshold=0
             Lower values increase sensitivity to shallow transits but may increase false positives.
             Default is 0.001, suitable for typical exoplanet transits.
     """
-    lc = search_lightcurve(target, mission=mission).download().normalize()
+    try:
+        lc = search_lightcurve(target, mission=mission).download().normalize()
+    except Exception as exc:
+        raise RuntimeError(
+            f"Failed to download light curve for {target} using {mission}: {exc}"
+        ) from exc
     time, flux = lc.time.value, lc.flux.value
     
     # Find dips in brightness (transits) using the specified height threshold
